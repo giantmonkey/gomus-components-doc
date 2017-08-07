@@ -317,8 +317,11 @@
 <h2 id="project-status">Project status</h2>
 <p>go~mus components is currently in beta and under active development. During beta, new features will be added regularly and APIs will evolve based on user feedback.</p>
 <p>Stable and experimental components and their APIs are marked using the <code>@stable</code> and <code>@experimental</code> flags.</p>
+<h2 id="compatibility">Compatibility</h2>
+<p>This project is compatible with version 4 of the go~mus API. The documentation for which can be found under: <a href="https://giantmonkey.github.io/gomus-api-doc">https://giantmonkey.github.io/gomus-api-doc</a></p>
 <h2 id="getting-started">Getting started</h2>
-<p>Getting started is easy and simple. Simply load go~mus component javascript file with your custom config in the <code>_gomusOptions</code> variable.</p>
+<p>Getting started is easy and simple. Simply load go~mus component javascript file with your custom config in the <code>_gomusOptions</code> variable.
+Detail documentation for this variable can be found under: <a href="https://giantmonkey.github.io/gomus-components-doc/classes/GomusOptions.html">https://giantmonkey.github.io/gomus-components-doc/classes/GomusOptions.html</a></p>
 <p><em>NOTE:</em> The config variable needs to load first before the script.</p>
 <p>For best results, load at the end of body.</p>
 <pre class="line-numbers"><code class="language-javascript">&lt;script type=&quot;text/javascript&quot;&gt;
@@ -338,6 +341,12 @@
   display: none;
 }</code></pre><p>Options can be passed in the main component elements as valid <a href="http://www.json.org/"><code>json objects</code></a>.</p>
 <p>Custom tables for dynamic component parts are not possible due to strict browser rules. Flex or other css will need to be used instead.</p>
+<h2 id="best-practices">Best Practices</h2>
+<ul>
+<li>load component script at end of body</li>
+<li>hide <code>ng-template</code> elements using css</li>
+<li>provide a loading state for components until the <code>components.js</code> script has finished loading. A <code>gomus-components:loaded</code> event is fired when the initialisation is completed.</li>
+</ul>
 <h2 id="top-level-components">Top level components</h2>
 <table class="table table-bordered compodoc-table">
 <thead>

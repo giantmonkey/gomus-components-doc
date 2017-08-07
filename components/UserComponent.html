@@ -323,6 +323,9 @@
     </li>
 
 
+    <li>
+        <a href="#example" role="tab" id="example-tab" data-toggle="tab" data-link="example">Demo</a>
+    </li>
 </ul>
 
 <div class="tab-content">
@@ -342,6 +345,7 @@ provides the creation of guest users.</p>
 </ul>
 <p>The UserComponent itself shows the main user screen.
 The User can then choose to login, register, or create guest account (needed for checkout process)</p>
+<p>IMPORTANT: please notify us of your chosen user url so we can configure go~mus with the correct redirects.</p>
 <p>The sub components can be selected using the url.
 To use append the following to the url on the page of the UserComponent:</p>
 <ul>
@@ -351,6 +355,8 @@ To use append the following to the url on the page of the UserComponent:</p>
 </ul>
 <p>Each inner component can also be used individually.</p>
 <p>The available options are listed under the inputs section below.</p>
+<p>Demo:</p>
+<p><example-url><a href="https://components.gomus.de/user/user.html">https://components.gomus.de/user/user.html</a></example-url></p>
 
     </p>
 
@@ -473,6 +479,11 @@ To use append the following to the url on the page of the UserComponent:</p>
                 <div class="color directive"></div><span>Html element with directive</span>
             </div>
         </div>
+    </div>
+    <div class="tab-pane fade" id="example">
+            <iframe src="https://components.gomus.de/user/user.html" style="height: 100vh; width: 100%;">
+                <p>Your browser does not support iframes.</p>
+            </iframe>
     </div>
 </div>
 
