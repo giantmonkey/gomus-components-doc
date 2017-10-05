@@ -327,7 +327,7 @@
 
 <ol class="breadcrumb">
   <li>Directives</li>
-  <li>TicketsTypeContainerDirective</li>
+  <li>GoControlStatus</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -345,23 +345,28 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/tickets/tickets-type/tickets-type.component.ts</code>
+            <code>src/app/shared/inputs/go_control_status.ts</code>
         </p>
 
             <p class="comment">
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Provides a wrapper for the TicketsTypeComponent</p>
+                <p>Directive automatically applied to Angular form controls that sets CSS classes
+based on control status. The following classes are applied as the properties
+become true:</p>
+<ul>
+<li>ng-valid</li>
+<li>ng-invalid</li>
+<li>ng-pending</li>
+<li>ng-pristine</li>
+<li>ng-dirty</li>
+<li>ng-untouched</li>
+<li>ng-touched</li>
+</ul>
 
             </p>
 
-            <p class="comment">
-                <h3>Implements</h3>
-            </p>
-            <p class="comment">
-                        <code><a href="https://angular.io/docs/ts/latest/api/core/index/OnInit-interface.html" target="_blank" >OnInit</a></code>
-            </p>
 
             <p class="comment">
                 <h3>Example</h3>
@@ -376,7 +381,7 @@
 
                     <tr>
                         <td class="col-md-3">selector</td>
-                        <td class="col-md-9"><code>go-tickets-type-container,[go-tickets-type-container]</code></td>
+                        <td class="col-md-9"><code>[go-form-control]</code></td>
                     </tr>
 
                 </tbody>
@@ -391,7 +396,7 @@
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <code>constructor(ticketService: <a href="../injectables/TicketService.html">TicketService</a>)</code>
+                                    <code>constructor(cd: GoFormControlDirective)</code>
                                 </td>
                             </tr>
             
@@ -402,8 +407,8 @@
                                                 <ul class="jsdoc-params">
                                                         <li>
                                                             <div>
-                                                                <b>ticketService</b>
-                                                                    :     <code><a href="../injectables/TicketService.html" target="_self" >TicketService</a></code>
+                                                                <b>cd</b>
+                                                                    :     <code>GoFormControlDirective</code>
             
                                                             </div>
                                                             <div>
@@ -418,38 +423,6 @@
                     </table>
             </section>
 
-            <section>
-                
-                    <h3 id="methods">
-                        Methods
-                    </h3>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <b> ngOnInit</b>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="col-md-4">
-            <code>ngOnInit()</code>
-                                </td>
-                            </tr>
-            
-            
-            
-                            <tr>
-                                <td class="col-md-4">
-            
-                                        <div class="io-description">
-                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-            
-                                        </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-            </section>
 
 
     </div>

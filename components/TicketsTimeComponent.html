@@ -61,6 +61,9 @@
                                 id="xs-components-links"
                             >
                                 <li class="link">
+                                    <a href="../components/AppComponent.html" >AppComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/CartButtonComponent.html" >CartButtonComponent</a>
                                 </li>
                                 <li class="link">
@@ -79,7 +82,10 @@
                                     <a href="../components/CheckoutSuccessComponent.html" >CheckoutSuccessComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/PaginationComponent.html" >PaginationComponent</a>
+                                    <a href="../components/InputErrorComponent.html" >InputErrorComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/OptionComponent.html" >OptionComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/ProductBreadcrumbsComponent.html" >ProductBreadcrumbsComponent</a>
@@ -207,6 +213,9 @@
                                        id="components-links"
                    >
                                        <li class="link">
+                                           <a href="../components/AppComponent.html" >AppComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/CartButtonComponent.html" >CartButtonComponent</a>
                                        </li>
                                        <li class="link">
@@ -225,7 +234,10 @@
                                            <a href="../components/CheckoutSuccessComponent.html" >CheckoutSuccessComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/PaginationComponent.html" >PaginationComponent</a>
+                                           <a href="../components/InputErrorComponent.html" >InputErrorComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/OptionComponent.html" >OptionComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/ProductBreadcrumbsComponent.html" >ProductBreadcrumbsComponent</a>
@@ -340,7 +352,7 @@ and displays the available start times for a selected date from the
 and the available options can be found here <a href="../classes/OptionsTime.html">OptionsTime</a></p>
 <p><em>NOTE</em>: The TicketsTimeComponent can be wrapped in the <a href="../directives/TicketsTimeContainerDirective.html">TicketsTimeContainerDirective</a>
 to allow it to be positioned with in other elements.</p>
-<pre class="line-numbers"><code class="language-none">&lt;div go-tickets-time-container&gt;
+<pre class="line-numbers"><code class="language-html">&lt;div go-tickets-time-container&gt;
   &lt;div&gt;
     &lt;go-tickets-time&gt;&lt;/go-tickets-time&gt;
   &lt;/div&gt;
@@ -406,13 +418,13 @@ to allow it to be positioned with in other elements.</p>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <code>items:     <code>[]</code>
+                            <code>items:     <code><a href="../classes/Ticket.html" target="_self" >StartTimeTicket[]</a></code>
     </bcode>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                <i>Type : </i>    <code>[]</code>
+                                <i>Type : </i>    <code><a href="../classes/Ticket.html" target="_self" >StartTimeTicket[]</a></code>
     
                             </td>
                         </tr>
@@ -478,8 +490,8 @@ to allow it to be positioned with in other elements.</p>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="show">  <ng-content></ng-content>  <ng-container *ngIf="!default">    <ng-template *ngFor="let item of items" [ngTemplateOutlet]="template" [ngOutletContext]="{item: item}">    </ng-template>  </ng-container>  <ng-container *ngIf="default">    <button [go-tickets-time-item]="item" *ngFor="let item of items;trackBy:index;" [class]="classes">      {{item?.startTime}}    </button>  </ng-container>  <ng-content select="[go-tickets-time-footer]"></ng-content></ng-container></div>'
-    var COMPONENTS = [{'name': 'CartButtonComponent', 'selector': 'go-cart-button-container'},{'name': 'CartComponent', 'selector': 'go-cart'},{'name': 'CheckoutComponent', 'selector': 'go-checkout'},{'name': 'CheckoutFailureComponent', 'selector': 'go-checkout-failure'},{'name': 'CheckoutPendingComponent', 'selector': 'go-checkout-pending'},{'name': 'CheckoutSuccessComponent', 'selector': 'go-checkout-success'},{'name': 'PaginationComponent', 'selector': 'go-pagination'},{'name': 'ProductBreadcrumbsComponent', 'selector': 'go-product-breadcrumbs,[go-product-breadcrumbs]'},{'name': 'ProductComponent', 'selector': 'go-product,[go-product]'},{'name': 'ProductDateComponent', 'selector': 'go-product-date,[go-product-date]'},{'name': 'ProductDetailComponent', 'selector': 'go-product-detail,[go-product-detail]'},{'name': 'ProductInfoComponent', 'selector': 'go-product-info,[go-product-info]'},{'name': 'ProductListComponent', 'selector': 'go-product-list,[go-product-list]'},{'name': 'ProductPricesComponent', 'selector': 'go-product-prices,[go-product-prices]'},{'name': 'ProductTimeComponent', 'selector': 'go-product-time,[go-product-time]'},{'name': 'SelectComponent', 'selector': 'go-select'},{'name': 'TicketsBreadcrumbsComponent', 'selector': 'go-tickets-breadcrumbs,[go-tickets-breadcrumbs]'},{'name': 'TicketsComponent', 'selector': 'go-tickets,[go-tickets]'},{'name': 'TicketsDateComponent', 'selector': 'go-tickets-date,[go-tickets-date]'},{'name': 'TicketsTimeComponent', 'selector': 'go-tickets-time,[go-tickets-time]'},{'name': 'TicketsTypeComponent', 'selector': 'go-tickets-type,[go-tickets-type]'},{'name': 'TotalComponent', 'selector': 'go-total'},{'name': 'UserComponent', 'selector': 'go-user'},{'name': 'UserGuestComponent', 'selector': 'go-user-guest'},{'name': 'UserLoginComponent', 'selector': 'go-user-login'},{'name': 'UserRegistrationComponent', 'selector': 'go-user-registration'},{'name': 'UserToolbarComponent', 'selector': 'go-user-toolbar'}];
-    var DIRECTIVES = [{'name': 'CartActionDirective', 'selector': '[go-cart-action]'},{'name': 'CartButtonDirective', 'selector': '[go-cart-button]'},{'name': 'CartItemDirective', 'selector': '[go-cart-item]'},{'name': 'CheckoutFailureActionDirective', 'selector': '[go-checkout-failure-action]'},{'name': 'CheckoutSuccessActionDirective', 'selector': '[go-checkout-success-action]'},{'name': 'GoTicketsTimeItemDirective', 'selector': '[go-tickets-time-item]'},{'name': 'HTMLDirective', 'selector': '[go-html]'},{'name': 'PaginationBackDirective', 'selector': '[go-pagination-back]'},{'name': 'PaginationItemDirective', 'selector': '[go-pagination-item]'},{'name': 'PaginationNextDirective', 'selector': '[go-pagination-next]'},{'name': 'ProductBreadcrumbsItemDirective', 'selector': '[go-product-breadcrumbs-item]'},{'name': 'ProductDateContainerDirective', 'selector': 'go-product-date-container,[go-product-date-container]'},{'name': 'ProductListItemDirective', 'selector': '[go-product-list-item]'},{'name': 'ProductPricesActionDirective', 'selector': '[go-product-prices-action]'},{'name': 'ProductPricesContainerDirective', 'selector': 'go-product-prices-container,[go-product-prices-container]'},{'name': 'ProductPricesDirective', 'selector': '[go-product-prices-item]'},{'name': 'ProductTimeContainerDirective', 'selector': 'go-product-time-container,[go-product-time-container]'},{'name': 'ProductTimeItemDirective', 'selector': '[go-product-time-item]'},{'name': 'TicketsBreadcrumbsItemDirective', 'selector': '[go-tickets-breadcrumbs-item]'},{'name': 'TicketsDateContainerDirective', 'selector': 'go-tickets-date-container,[go-tickets-date-container]'},{'name': 'TicketsTimeContainerDirective', 'selector': 'go-tickets-time-container,[go-tickets-time-container]'},{'name': 'TicketsTypeActionDirective', 'selector': '[go-tickets-type-action]'},{'name': 'TicketsTypeContainerDirective', 'selector': 'go-tickets-type-container,[go-tickets-type-container]'},{'name': 'TicketsTypeItemDirective', 'selector': '[go-tickets-type-item]'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'body'},{'name': 'CartButtonComponent', 'selector': 'go-cart-button-container'},{'name': 'CartComponent', 'selector': 'go-cart'},{'name': 'CheckoutComponent', 'selector': 'go-checkout'},{'name': 'CheckoutFailureComponent', 'selector': 'go-checkout-failure'},{'name': 'CheckoutPendingComponent', 'selector': 'go-checkout-pending'},{'name': 'CheckoutSuccessComponent', 'selector': 'go-checkout-success'},{'name': 'InputErrorComponent', 'selector': 'go-input-error,[go-input-error]'},{'name': 'OptionComponent', 'selector': 'select[go-form-control]'},{'name': 'ProductBreadcrumbsComponent', 'selector': 'go-product-breadcrumbs,[go-product-breadcrumbs]'},{'name': 'ProductComponent', 'selector': 'go-product,[go-product]'},{'name': 'ProductDateComponent', 'selector': 'go-product-date,[go-product-date]'},{'name': 'ProductDetailComponent', 'selector': 'go-product-detail,[go-product-detail]'},{'name': 'ProductInfoComponent', 'selector': 'go-product-info,[go-product-info]'},{'name': 'ProductListComponent', 'selector': 'go-product-list,[go-product-list]'},{'name': 'ProductPricesComponent', 'selector': 'go-product-prices,[go-product-prices]'},{'name': 'ProductTimeComponent', 'selector': 'go-product-time,[go-product-time]'},{'name': 'SelectComponent', 'selector': 'go-select'},{'name': 'TicketsBreadcrumbsComponent', 'selector': 'go-tickets-breadcrumbs,[go-tickets-breadcrumbs]'},{'name': 'TicketsComponent', 'selector': 'go-tickets,[go-tickets]'},{'name': 'TicketsDateComponent', 'selector': 'go-tickets-date,[go-tickets-date]'},{'name': 'TicketsTimeComponent', 'selector': 'go-tickets-time,[go-tickets-time]'},{'name': 'TicketsTypeComponent', 'selector': 'go-tickets-type,[go-tickets-type]'},{'name': 'TotalComponent', 'selector': 'go-total'},{'name': 'UserComponent', 'selector': 'go-user'},{'name': 'UserGuestComponent', 'selector': 'go-user-guest'},{'name': 'UserLoginComponent', 'selector': 'go-user-login'},{'name': 'UserRegistrationComponent', 'selector': 'go-user-registration'},{'name': 'UserToolbarComponent', 'selector': 'go-user-toolbar'}];
+    var DIRECTIVES = [{'name': 'CheckoutFailureActionDirective', 'selector': '[go-checkout-failure-action]'},{'name': 'CheckoutSuccessActionDirective', 'selector': '[go-checkout-success-action]'},{'name': 'GoCheckboxControlValueAccessor', 'selector': 'input[type&#x3D;checkbox][go-form-control]'},{'name': 'GoControlStatus', 'selector': '[go-form-control]'},{'name': 'GoControlStatusGroup', 'selector': '[formGroupName],[formArrayName],[ngModelGroup],[formGroup],form:not([ngNoForm]),[ngForm]'},{'name': 'GoDefaultValueAccessor', 'selector': 'input:not([type&#x3D;&quot;checkbox&quot;])[go-form-control]'},{'name': 'GoFormControlDirective', 'selector': 'input[go-form-control], select[go-form-control]'},{'name': 'GoSelectControlValueAccessor', 'selector': 'select[go-form-control]'},{'name': 'InputContainerDirective', 'selector': 'go-input-container,[go-input-container]'},{'name': 'ProductDateContainerDirective', 'selector': 'go-product-date-container,[go-product-date-container]'},{'name': 'ProductPricesContainerDirective', 'selector': 'go-product-prices-container,[go-product-prices-container]'},{'name': 'ProductPricesDirective', 'selector': '[go-product-prices-item]'},{'name': 'ProductTimeContainerDirective', 'selector': 'go-product-time-container,[go-product-time-container]'},{'name': 'TicketsDateContainerDirective', 'selector': 'go-tickets-date-container,[go-tickets-date-container]'},{'name': 'TicketsTimeContainerDirective', 'selector': 'go-tickets-time-container,[go-tickets-time-container]'},{'name': 'TicketsTypeContainerDirective', 'selector': 'go-tickets-type-container,[go-tickets-type-container]'},{'name': 'TicketsTypeItemDirective', 'selector': '[go-tickets-type-item]'}];
     var ACTUAL_COMPONENT = {'name': 'TicketsTimeComponent'};
 </script>
 <script src="../js/tree.js"></script>

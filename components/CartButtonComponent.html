@@ -61,6 +61,9 @@
                                 id="xs-components-links"
                             >
                                 <li class="link">
+                                    <a href="../components/AppComponent.html" >AppComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/CartButtonComponent.html"  data-type="entity-link" class="active" >CartButtonComponent</a>
                                 </li>
                                 <li class="link">
@@ -79,7 +82,10 @@
                                     <a href="../components/CheckoutSuccessComponent.html" >CheckoutSuccessComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/PaginationComponent.html" >PaginationComponent</a>
+                                    <a href="../components/InputErrorComponent.html" >InputErrorComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/OptionComponent.html" >OptionComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/ProductBreadcrumbsComponent.html" >ProductBreadcrumbsComponent</a>
@@ -207,6 +213,9 @@
                                        id="components-links"
                    >
                                        <li class="link">
+                                           <a href="../components/AppComponent.html" >AppComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/CartButtonComponent.html"  data-type="entity-link" class="active" >CartButtonComponent</a>
                                        </li>
                                        <li class="link">
@@ -225,7 +234,10 @@
                                            <a href="../components/CheckoutSuccessComponent.html" >CheckoutSuccessComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/PaginationComponent.html" >PaginationComponent</a>
+                                           <a href="../components/InputErrorComponent.html" >InputErrorComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/OptionComponent.html" >OptionComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/ProductBreadcrumbsComponent.html" >ProductBreadcrumbsComponent</a>
@@ -336,7 +348,10 @@
     </p>
     <p class="comment">
         <p>The CartButtonComponent allows the displaying of the number of items
-in the cart and provides a link to the <a href="../components/CartComponent.html">CartComponent</a>.</p>
+in the cart and makes use of the {@link CartButtonDirective} which
+can be used to provide a link to the {@link CartComponent}.</p>
+<p>The CartButtonComponent can be customised by providing a valid JSON
+object to an <code>options</code> attriabute.</p>
 <p>Demo:</p>
 <p><example-url><a href="https://components.gomus.de/index.html">https://components.gomus.de/index.html</a></example-url></p>
 
@@ -367,6 +382,22 @@ in the cart and provides a link to the <a href="../components/CartComponent.html
     </table>
 </section>
 
+    <section>
+        <h3 id="inputs">Inputs</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <code>options</code>
+                        </td>
+                        <td class="col-md-10">
+                            <div><p>Available options: <a href="../classes/CartButtonOptions.html">CartButtonOptions</a></p>
+</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
 
     <p class="comment">
         <h3>Example</h3>
@@ -435,8 +466,8 @@ in the cart and provides a link to the <a href="../components/CartComponent.html
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="!default">  <ng-template [ngTemplateOutlet]="template" [ngOutletContext]="{cart: cart}">  </ng-template></ng-container><ng-container *ngIf="default">  <button [go-cart-button]="cart" [class]="classes">{{cart.items}}    <img class="go-cart-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAAA3lBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACpNbQVAAAASXRSTlMAAQIEBQYHCAoLDA8QERUXGBohIiorLi84OTw9QEVGSUpNUVlcX2FjZmdoaXF1gImOj5GbnqCqra+yvsDIys7P09fg4uTv8fP7imVeHQAAAN9JREFUOI3F0sUWwjAQBdDiXtzdKe7u2vn/HyLFB9owK3jLN/ckbRJB+G3ESo2l7OSiHVyy5KKifFXGr3v6QTt78YZMHASV+1JbDqrdUYuCkhTkoSA9BQkLCmpQUISCXBSkkzVR9Xl9E00UfKLyx1Be9urZsNf88hCCj+Fu3MxHfQ6DymuxAqykZEC06FSGjxygxxtfs4HBVxMC6CY+EjMhNFP//+nbJ6lmjpCbNVIOpc4qO0LKYXbwZ45YlUbNSVkcHaBNadYIHSmoxJo23m7IqhSuMoPC243opX5c+EPOl12YGXPVCYoAAAAASUVORK5CYII="/>  </button></ng-container></div>'
-    var COMPONENTS = [{'name': 'CartButtonComponent', 'selector': 'go-cart-button-container'},{'name': 'CartComponent', 'selector': 'go-cart'},{'name': 'CheckoutComponent', 'selector': 'go-checkout'},{'name': 'CheckoutFailureComponent', 'selector': 'go-checkout-failure'},{'name': 'CheckoutPendingComponent', 'selector': 'go-checkout-pending'},{'name': 'CheckoutSuccessComponent', 'selector': 'go-checkout-success'},{'name': 'PaginationComponent', 'selector': 'go-pagination'},{'name': 'ProductBreadcrumbsComponent', 'selector': 'go-product-breadcrumbs,[go-product-breadcrumbs]'},{'name': 'ProductComponent', 'selector': 'go-product,[go-product]'},{'name': 'ProductDateComponent', 'selector': 'go-product-date,[go-product-date]'},{'name': 'ProductDetailComponent', 'selector': 'go-product-detail,[go-product-detail]'},{'name': 'ProductInfoComponent', 'selector': 'go-product-info,[go-product-info]'},{'name': 'ProductListComponent', 'selector': 'go-product-list,[go-product-list]'},{'name': 'ProductPricesComponent', 'selector': 'go-product-prices,[go-product-prices]'},{'name': 'ProductTimeComponent', 'selector': 'go-product-time,[go-product-time]'},{'name': 'SelectComponent', 'selector': 'go-select'},{'name': 'TicketsBreadcrumbsComponent', 'selector': 'go-tickets-breadcrumbs,[go-tickets-breadcrumbs]'},{'name': 'TicketsComponent', 'selector': 'go-tickets,[go-tickets]'},{'name': 'TicketsDateComponent', 'selector': 'go-tickets-date,[go-tickets-date]'},{'name': 'TicketsTimeComponent', 'selector': 'go-tickets-time,[go-tickets-time]'},{'name': 'TicketsTypeComponent', 'selector': 'go-tickets-type,[go-tickets-type]'},{'name': 'TotalComponent', 'selector': 'go-total'},{'name': 'UserComponent', 'selector': 'go-user'},{'name': 'UserGuestComponent', 'selector': 'go-user-guest'},{'name': 'UserLoginComponent', 'selector': 'go-user-login'},{'name': 'UserRegistrationComponent', 'selector': 'go-user-registration'},{'name': 'UserToolbarComponent', 'selector': 'go-user-toolbar'}];
-    var DIRECTIVES = [{'name': 'CartActionDirective', 'selector': '[go-cart-action]'},{'name': 'CartButtonDirective', 'selector': '[go-cart-button]'},{'name': 'CartItemDirective', 'selector': '[go-cart-item]'},{'name': 'CheckoutFailureActionDirective', 'selector': '[go-checkout-failure-action]'},{'name': 'CheckoutSuccessActionDirective', 'selector': '[go-checkout-success-action]'},{'name': 'GoTicketsTimeItemDirective', 'selector': '[go-tickets-time-item]'},{'name': 'HTMLDirective', 'selector': '[go-html]'},{'name': 'PaginationBackDirective', 'selector': '[go-pagination-back]'},{'name': 'PaginationItemDirective', 'selector': '[go-pagination-item]'},{'name': 'PaginationNextDirective', 'selector': '[go-pagination-next]'},{'name': 'ProductBreadcrumbsItemDirective', 'selector': '[go-product-breadcrumbs-item]'},{'name': 'ProductDateContainerDirective', 'selector': 'go-product-date-container,[go-product-date-container]'},{'name': 'ProductListItemDirective', 'selector': '[go-product-list-item]'},{'name': 'ProductPricesActionDirective', 'selector': '[go-product-prices-action]'},{'name': 'ProductPricesContainerDirective', 'selector': 'go-product-prices-container,[go-product-prices-container]'},{'name': 'ProductPricesDirective', 'selector': '[go-product-prices-item]'},{'name': 'ProductTimeContainerDirective', 'selector': 'go-product-time-container,[go-product-time-container]'},{'name': 'ProductTimeItemDirective', 'selector': '[go-product-time-item]'},{'name': 'TicketsBreadcrumbsItemDirective', 'selector': '[go-tickets-breadcrumbs-item]'},{'name': 'TicketsDateContainerDirective', 'selector': 'go-tickets-date-container,[go-tickets-date-container]'},{'name': 'TicketsTimeContainerDirective', 'selector': 'go-tickets-time-container,[go-tickets-time-container]'},{'name': 'TicketsTypeActionDirective', 'selector': '[go-tickets-type-action]'},{'name': 'TicketsTypeContainerDirective', 'selector': 'go-tickets-type-container,[go-tickets-type-container]'},{'name': 'TicketsTypeItemDirective', 'selector': '[go-tickets-type-item]'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'body'},{'name': 'CartButtonComponent', 'selector': 'go-cart-button-container'},{'name': 'CartComponent', 'selector': 'go-cart'},{'name': 'CheckoutComponent', 'selector': 'go-checkout'},{'name': 'CheckoutFailureComponent', 'selector': 'go-checkout-failure'},{'name': 'CheckoutPendingComponent', 'selector': 'go-checkout-pending'},{'name': 'CheckoutSuccessComponent', 'selector': 'go-checkout-success'},{'name': 'InputErrorComponent', 'selector': 'go-input-error,[go-input-error]'},{'name': 'OptionComponent', 'selector': 'select[go-form-control]'},{'name': 'ProductBreadcrumbsComponent', 'selector': 'go-product-breadcrumbs,[go-product-breadcrumbs]'},{'name': 'ProductComponent', 'selector': 'go-product,[go-product]'},{'name': 'ProductDateComponent', 'selector': 'go-product-date,[go-product-date]'},{'name': 'ProductDetailComponent', 'selector': 'go-product-detail,[go-product-detail]'},{'name': 'ProductInfoComponent', 'selector': 'go-product-info,[go-product-info]'},{'name': 'ProductListComponent', 'selector': 'go-product-list,[go-product-list]'},{'name': 'ProductPricesComponent', 'selector': 'go-product-prices,[go-product-prices]'},{'name': 'ProductTimeComponent', 'selector': 'go-product-time,[go-product-time]'},{'name': 'SelectComponent', 'selector': 'go-select'},{'name': 'TicketsBreadcrumbsComponent', 'selector': 'go-tickets-breadcrumbs,[go-tickets-breadcrumbs]'},{'name': 'TicketsComponent', 'selector': 'go-tickets,[go-tickets]'},{'name': 'TicketsDateComponent', 'selector': 'go-tickets-date,[go-tickets-date]'},{'name': 'TicketsTimeComponent', 'selector': 'go-tickets-time,[go-tickets-time]'},{'name': 'TicketsTypeComponent', 'selector': 'go-tickets-type,[go-tickets-type]'},{'name': 'TotalComponent', 'selector': 'go-total'},{'name': 'UserComponent', 'selector': 'go-user'},{'name': 'UserGuestComponent', 'selector': 'go-user-guest'},{'name': 'UserLoginComponent', 'selector': 'go-user-login'},{'name': 'UserRegistrationComponent', 'selector': 'go-user-registration'},{'name': 'UserToolbarComponent', 'selector': 'go-user-toolbar'}];
+    var DIRECTIVES = [{'name': 'CheckoutFailureActionDirective', 'selector': '[go-checkout-failure-action]'},{'name': 'CheckoutSuccessActionDirective', 'selector': '[go-checkout-success-action]'},{'name': 'GoCheckboxControlValueAccessor', 'selector': 'input[type&#x3D;checkbox][go-form-control]'},{'name': 'GoControlStatus', 'selector': '[go-form-control]'},{'name': 'GoControlStatusGroup', 'selector': '[formGroupName],[formArrayName],[ngModelGroup],[formGroup],form:not([ngNoForm]),[ngForm]'},{'name': 'GoDefaultValueAccessor', 'selector': 'input:not([type&#x3D;&quot;checkbox&quot;])[go-form-control]'},{'name': 'GoFormControlDirective', 'selector': 'input[go-form-control], select[go-form-control]'},{'name': 'GoSelectControlValueAccessor', 'selector': 'select[go-form-control]'},{'name': 'InputContainerDirective', 'selector': 'go-input-container,[go-input-container]'},{'name': 'ProductDateContainerDirective', 'selector': 'go-product-date-container,[go-product-date-container]'},{'name': 'ProductPricesContainerDirective', 'selector': 'go-product-prices-container,[go-product-prices-container]'},{'name': 'ProductPricesDirective', 'selector': '[go-product-prices-item]'},{'name': 'ProductTimeContainerDirective', 'selector': 'go-product-time-container,[go-product-time-container]'},{'name': 'TicketsDateContainerDirective', 'selector': 'go-tickets-date-container,[go-tickets-date-container]'},{'name': 'TicketsTimeContainerDirective', 'selector': 'go-tickets-time-container,[go-tickets-time-container]'},{'name': 'TicketsTypeContainerDirective', 'selector': 'go-tickets-type-container,[go-tickets-type-container]'},{'name': 'TicketsTypeItemDirective', 'selector': '[go-tickets-type-item]'}];
     var ACTUAL_COMPONENT = {'name': 'CartButtonComponent'};
 </script>
 <script src="../js/tree.js"></script>
