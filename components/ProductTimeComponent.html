@@ -352,6 +352,10 @@ and displays the available start times for a selected date from the
 and the available options can be found here <a href="../classes/OptionsTime.html">OptionsTime</a></p>
 <p>For events <code>item?.date.startTime</code> must be used not <code>item?.startTime</code>. This will be
 normalized in a future version.</p>
+<p><em>NOTE</em>: The ProductTimeComponent can use a select field instead of links or buttons.
+For this, the select field must go in the ProductTime Component directly, not in an <code>ng-template</code>.
+The value for <code>go-form-control</code> is <code>product_time</code>.
+An example is shown below.</p>
 <p><em>NOTE</em>: The ProductTimeComponent can be wrapped in the <a href="../directives/ProductTimeContainerDirective.html">ProductTimeContainerDirective</a>
 to allow it to be positioned with in other elements.</p>
 <pre class="line-numbers"><code class="language-html">&lt;div go-product-time-container&gt;
@@ -406,6 +410,11 @@ to allow it to be positioned with in other elements.</p>
    &lt;ng-template let-item=&quot;item&quot;&gt;
      &lt;a [go-product-time-item]=&quot;item&quot;&gt;{{item?.startTime}}&lt;/a&gt;
    &lt;/ng-template&gt;
+&lt;/go-product-time&gt;</code></pre>
+                </div>
+                <div>
+                    <pre class="line-numbers"><code class="language-html">&lt;go-product-time&gt;
+  &lt;select go-form-control=&quot;product_time&quot;&gt;&lt;/select&gt;
 &lt;/go-product-time&gt;</code></pre>
                 </div>
     </div>
@@ -495,21 +504,21 @@ to allow it to be positioned with in other elements.</p>
     <div class="tab-pane fade" id="templateData">
         <pre class="line-numbers"><code class="language-html">&lt;ng-container *ngIf&#x3D;&quot;show&quot;&gt;
   &lt;ng-content&gt;&lt;/ng-content&gt;
-  &lt;ng-container *ngIf&#x3D;&quot;!default &amp;&amp; startTimes&quot;&gt;
+  &lt;ng-container *ngIf&#x3D;&quot;!default &amp;&amp; !select &amp;&amp; startTimes&quot;&gt;
     &lt;ng-template *ngFor&#x3D;&quot;let item of startTimes;trackBy:index;&quot; [ngTemplateOutlet]&#x3D;&quot;template&quot; [ngOutletContext]&#x3D;&quot;{item: item}&quot;&gt;
     &lt;/ng-template&gt;
   &lt;/ng-container&gt;
-  &lt;ng-container *ngIf&#x3D;&quot;!default &amp;&amp; dates&quot;&gt;
+  &lt;ng-container *ngIf&#x3D;&quot;!default &amp;&amp; !select &amp;&amp; dates&quot;&gt;
     &lt;ng-template *ngFor&#x3D;&quot;let item of dates;trackBy:index;&quot; [ngTemplateOutlet]&#x3D;&quot;template&quot; [ngOutletContext]&#x3D;&quot;{item: item}&quot;&gt;
     &lt;/ng-template&gt;
   &lt;/ng-container&gt;
 
-  &lt;ng-container *ngIf&#x3D;&quot;default &amp;&amp; startTimes&quot;&gt;
+  &lt;ng-container *ngIf&#x3D;&quot;default &amp;&amp; !select &amp;&amp; startTimes&quot;&gt;
     &lt;button [go-product-time-item]&#x3D;&quot;item&quot; *ngFor&#x3D;&quot;let item of startTimes;trackBy:index;&quot; [class]&#x3D;&quot;classes&quot;&gt;
       {{item?.startTime}}
     &lt;/button&gt;
   &lt;/ng-container&gt;
-  &lt;ng-container *ngIf&#x3D;&quot;default &amp;&amp; dates&quot;&gt;
+  &lt;ng-container *ngIf&#x3D;&quot;default &amp;&amp; !select &amp;&amp; dates&quot;&gt;
     &lt;button [go-product-time-item]&#x3D;&quot;item&quot; *ngFor&#x3D;&quot;let item of dates;trackBy:index;&quot; [class]&#x3D;&quot;classes&quot;&gt;
       {{item?.date.startTime}}
     &lt;/button&gt;
@@ -542,7 +551,7 @@ to allow it to be positioned with in other elements.</p>
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="show">  <ng-content></ng-content>  <ng-container *ngIf="!default && startTimes">    <ng-template *ngFor="let item of startTimes;trackBy:index;" [ngTemplateOutlet]="template" [ngOutletContext]="{item: item}">    </ng-template>  </ng-container>  <ng-container *ngIf="!default && dates">    <ng-template *ngFor="let item of dates;trackBy:index;" [ngTemplateOutlet]="template" [ngOutletContext]="{item: item}">    </ng-template>  </ng-container>  <ng-container *ngIf="default && startTimes">    <button [go-product-time-item]="item" *ngFor="let item of startTimes;trackBy:index;" [class]="classes">      {{item?.startTime}}    </button>  </ng-container>  <ng-container *ngIf="default && dates">    <button [go-product-time-item]="item" *ngFor="let item of dates;trackBy:index;" [class]="classes">      {{item?.date.startTime}}    </button>  </ng-container>  <ng-content select="[go-product-time-footer]"></ng-content></ng-container></div>'
+        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="show">  <ng-content></ng-content>  <ng-container *ngIf="!default && !select && startTimes">    <ng-template *ngFor="let item of startTimes;trackBy:index;" [ngTemplateOutlet]="template" [ngOutletContext]="{item: item}">    </ng-template>  </ng-container>  <ng-container *ngIf="!default && !select && dates">    <ng-template *ngFor="let item of dates;trackBy:index;" [ngTemplateOutlet]="template" [ngOutletContext]="{item: item}">    </ng-template>  </ng-container>  <ng-container *ngIf="default && !select && startTimes">    <button [go-product-time-item]="item" *ngFor="let item of startTimes;trackBy:index;" [class]="classes">      {{item?.startTime}}    </button>  </ng-container>  <ng-container *ngIf="default && !select && dates">    <button [go-product-time-item]="item" *ngFor="let item of dates;trackBy:index;" [class]="classes">      {{item?.date.startTime}}    </button>  </ng-container>  <ng-content select="[go-product-time-footer]"></ng-content></ng-container></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'body'},{'name': 'CartButtonComponent', 'selector': 'go-cart-button-container'},{'name': 'CartComponent', 'selector': 'go-cart'},{'name': 'CheckoutComponent', 'selector': 'go-checkout'},{'name': 'CheckoutFailureComponent', 'selector': 'go-checkout-failure'},{'name': 'CheckoutPendingComponent', 'selector': 'go-checkout-pending'},{'name': 'CheckoutSuccessComponent', 'selector': 'go-checkout-success'},{'name': 'InputErrorComponent', 'selector': 'go-input-error,[go-input-error]'},{'name': 'OptionComponent', 'selector': 'select[go-form-control]'},{'name': 'ProductBreadcrumbsComponent', 'selector': 'go-product-breadcrumbs,[go-product-breadcrumbs]'},{'name': 'ProductComponent', 'selector': 'go-product,[go-product]'},{'name': 'ProductDateComponent', 'selector': 'go-product-date,[go-product-date]'},{'name': 'ProductDetailComponent', 'selector': 'go-product-detail,[go-product-detail]'},{'name': 'ProductInfoComponent', 'selector': 'go-product-info,[go-product-info]'},{'name': 'ProductListComponent', 'selector': 'go-product-list,[go-product-list]'},{'name': 'ProductPricesComponent', 'selector': 'go-product-prices,[go-product-prices]'},{'name': 'ProductTimeComponent', 'selector': 'go-product-time,[go-product-time]'},{'name': 'SelectComponent', 'selector': 'go-select'},{'name': 'TicketsBreadcrumbsComponent', 'selector': 'go-tickets-breadcrumbs,[go-tickets-breadcrumbs]'},{'name': 'TicketsComponent', 'selector': 'go-tickets,[go-tickets]'},{'name': 'TicketsDateComponent', 'selector': 'go-tickets-date,[go-tickets-date]'},{'name': 'TicketsTimeComponent', 'selector': 'go-tickets-time,[go-tickets-time]'},{'name': 'TicketsTypeComponent', 'selector': 'go-tickets-type,[go-tickets-type]'},{'name': 'TotalComponent', 'selector': 'go-total'},{'name': 'UserComponent', 'selector': 'go-user'},{'name': 'UserGuestComponent', 'selector': 'go-user-guest'},{'name': 'UserLoginComponent', 'selector': 'go-user-login'},{'name': 'UserRegistrationComponent', 'selector': 'go-user-registration'},{'name': 'UserToolbarComponent', 'selector': 'go-user-toolbar'}];
     var DIRECTIVES = [{'name': 'CheckoutFailureActionDirective', 'selector': '[go-checkout-failure-action]'},{'name': 'CheckoutSuccessActionDirective', 'selector': '[go-checkout-success-action]'},{'name': 'GoCheckboxControlValueAccessor', 'selector': 'input[type&#x3D;checkbox][go-form-control]'},{'name': 'GoControlStatus', 'selector': '[go-form-control]'},{'name': 'GoControlStatusGroup', 'selector': '[formGroupName],[formArrayName],[ngModelGroup],[formGroup],form:not([ngNoForm]),[ngForm]'},{'name': 'GoDefaultValueAccessor', 'selector': 'input:not([type&#x3D;&quot;checkbox&quot;])[go-form-control]'},{'name': 'GoFormControlDirective', 'selector': 'input[go-form-control], select[go-form-control]'},{'name': 'GoSelectControlValueAccessor', 'selector': 'select[go-form-control]'},{'name': 'InputContainerDirective', 'selector': 'go-input-container,[go-input-container]'},{'name': 'ProductDateContainerDirective', 'selector': 'go-product-date-container,[go-product-date-container]'},{'name': 'ProductPricesContainerDirective', 'selector': 'go-product-prices-container,[go-product-prices-container]'},{'name': 'ProductPricesDirective', 'selector': '[go-product-prices-item]'},{'name': 'ProductTimeContainerDirective', 'selector': 'go-product-time-container,[go-product-time-container]'},{'name': 'TicketsDateContainerDirective', 'selector': 'go-tickets-date-container,[go-tickets-date-container]'},{'name': 'TicketsTimeContainerDirective', 'selector': 'go-tickets-time-container,[go-tickets-time-container]'},{'name': 'TicketsTypeContainerDirective', 'selector': 'go-tickets-type-container,[go-tickets-type-container]'},{'name': 'TicketsTypeItemDirective', 'selector': '[go-tickets-type-item]'}];
     var ACTUAL_COMPONENT = {'name': 'ProductTimeComponent'};
