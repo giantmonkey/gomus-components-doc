@@ -358,6 +358,16 @@
 <p>If these are not defined, then default templates will be used.</p>
 <p>The ProductComponent also can be customised by providing a valid JSON object to an <code>options</code> attribute.</p>
 <pre class="line-numbers"><code class="language-html">&lt;go-product product-id=&quot;&quot; product-type=&quot;&quot; options=&#39;{&quot;breadcrumbs&quot;: {&quot;enable&quot;: false}}&#39;&gt;&lt;go-product&gt;</code></pre><p>The available options are listed under the inputs section below.</p>
+<p>The inputs for the ProductComponent can be set dynamically using a JS <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent">CustomEvent</a>.
+The detail object can contain <code>go_product_id</code>, <code>go_product_type</code> and <code>go_product_options</code> and it must be dispatched on the <code>document</code> element.
+For example:</p>
+<pre class="line-numbers"><code class="language-js">var event = new CustomEvent(&#39;gomus-components:product-changes&#39;, {
+  detail: {
+    go_product_id: 2,
+    go_product_type: &#39;tour&#39;,
+    go_product_options: {}
+}});
+document.dispatchEvent(event);</code></pre><p><em>NOTE</em>: Do not modify the html of any components after the components script has been loaded.</p>
 <p>Demo:</p>
 <p><example-url><a href="https://components.gomus.de/events/product.html">https://components.gomus.de/events/product.html</a></example-url></p>
 <p><example-url><a href="https://components.gomus.de/events/product-custom.html">https://components.gomus.de/events/product-custom.html</a></example-url></p>
@@ -413,10 +423,8 @@
                             <code>product-id</code>
                         </td>
                         <td class="col-md-10">
-                              <p>
-                                <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-
-                              </p>
+                            <div><p>Available values: valid go~mus product id</p>
+</div>
                         </td>
                     </tr>
                 </tbody>
@@ -430,10 +438,6 @@
                         <td class="col-md-10">
                             <div><p>Available values: <code>event</code> or <code>tour</code></p>
 </div>
-                              <p>
-                                <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                              </p>
                         </td>
                     </tr>
                 </tbody>
