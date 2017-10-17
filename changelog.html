@@ -325,23 +325,9 @@
 <p>All notable changes to this project will be documented in this file.</p>
 <p>The format is based on <a href="http://keepachangelog.com/en/1.0.0/">Keep a Changelog</a> and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
 <h2 id="-unreleased-2017-10-17-https-giantmonkey-github-io-gomus-components-doc-changelog-html-head-2017-10-17-"><a href="https://giantmonkey.github.io/gomus-components-doc/changelog.html#-HEAD-2017-10-17">[UNRELEASED] - 2017-10-17</a></h2>
-<h3 id="added">Added</h3>
-<ul>
-<li>add the dynamic updating of the <a href="https://giantmonkey.github.io/gomus-components-doc/components/ProductComponent.html">ProductComponent</a> using a JS CustomEvent</li>
-<li>allow the use of select fields as the custom template for the <a href="https://giantmonkey.github.io/gomus-components-doc/components/ProductTimeComponent.html">ProductTimeComponent</a></li>
-<li>add validation to CartActionDirective: only if there are items present in the cart, will the action be carried out</li>
-<li>added options to disable days for the <a href="https://giantmonkey.github.io/gomus-components-doc/components/ProductDateComponent.html">ProductDateComponent</a>. Dates can now be disabled when they are booked-out and/or empty: <a href="https://giantmonkey.github.io/gomus-components-doc/interfaces/IsDateDisabled.html">IsDateDisabled</a></li>
-</ul>
 <h3 id="changed">Changed</h3>
 <ul>
 <li>change the <a href="https://giantmonkey.github.io/gomus-components-doc/components/ProductComponent.html">ProductComponent</a> to listen for change events (<code>goComponentChanges</code>) on the element itself, not on the global document level. This allows the support of updating multiple ProductComponents on one page.</li>
-<li>Change and unify wording of <code>options</code> input types in documentation</li>
-<li>changed the user documentation to warn about notifying PMs of the url to be used as the redirect after a successful user registration</li>
-</ul>
-<h3 id="fixed">Fixed</h3>
-<ul>
-<li>fix the setting of the locale in the global options (<code>_gomusOptions</code>)</li>
-<li>redirect to the <code>user_url</code> defined in the <a href="https://giantmonkey.github.io/gomus-components-doc/classes/CheckoutOptions.html">options object</a> if user is not authenticated in the checkout process</li>
 </ul>
 <h2 id="-v-0-1-11-2017-10-17-https-giantmonkey-github-io-gomus-components-doc-changelog-html-v-0-1-11-2017-10-17-"><a href="https://giantmonkey.github.io/gomus-components-doc/changelog.html#-v-0-1-11-2017-10-17">[v.0.1.11] - 2017-10-17</a></h2>
 <h3 id="added">Added</h3>
