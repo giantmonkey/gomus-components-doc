@@ -359,6 +359,7 @@
 <li><a href="../components/ProductBreadcrumbsComponent.html">ProductBreadcrumbsComponent</a></li>
 <li><a href="../components/ProductDateComponent.html">ProductDateComponent</a></li>
 <li><a href="../components/ProductTimeComponent.html">ProductTimeComponent</a></li>
+<li><a href="../components/ProductFiltersComponent.html">ProductFiltersComponent</a> (only for tours)</li>
 <li><a href="../components/ProductPricesComponent.html">ProductPricesComponent</a></li>
 </ul>
 <p>If these are not defined, then default templates will be used.</p>
@@ -459,11 +460,20 @@ myGoProductElement.dispatchEvent(event);</code></pre><p><em>NOTE</em>: Do not mo
                     <pre class="line-numbers"><code class="language-html">&lt;go-product product-id=&quot;1&quot; product-type=&quot;event&quot;&gt;&lt;/go-product&gt;</code></pre>
                 </div>
                 <div>
-                    <pre class="line-numbers"><code class="language-html">&lt;go-product product-id=&quot;2&quot; product-type=&quot;tour&quot;&gt;
+                    <pre class="line-numbers"><code class="language-html">&lt;go-product product-id=&quot;1&quot; product-type=&quot;event&quot;&gt;
   &lt;go-product-breadcrumbs&gt;&lt;/go-product-breadcrumbs&gt;
   &lt;go-product-date&gt;&lt;/go-product-date&gt;
   &lt;go-product-time&gt;&lt;/go-product-time&gt;
   &lt;go-product-prices&gt;&lt;/go-product-prices&gt;
+&lt;/go-product&gt;</code></pre>
+                </div>
+                <div>
+                    <pre class="line-numbers"><code class="language-html">&lt;go-product product-id=&quot;2&quot; product-type=&quot;tour&quot;&gt;
+&lt;go-product-breadcrumbs&gt;&lt;/go-product-breadcrumbs&gt;
+&lt;go-product-date&gt;&lt;/go-product-date&gt;
+&lt;go-product-time&gt;&lt;/go-product-time&gt;
+&lt;go-product-filters&gt;&lt;/go-product-filters&gt;
+&lt;go-product-prices&gt;&lt;/go-product-prices&gt;
 &lt;/go-product&gt;</code></pre>
                 </div>
     </div>
