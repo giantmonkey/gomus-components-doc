@@ -374,8 +374,10 @@ To use append the following to the url on the page of the UserComponent:</p>
 <li><code>#/?user=guest</code></li>
 </ul>
 <p>The available options are listed under the inputs section below.</p>
-<p>The user component itself is currently not customisable, but the inner components are.</p>
-<p>The registration and guest components can however be customised in this component, by defining them within the component. See below.</p>
+<p>The user component itself template can be customised using the <a href="../directives/UserContentDirective.html">UserContentDirective</a> (<code>go-user-content</code>) directive.
+See the second example below.</p>
+<p>The login, registration and guest components can also be customised in this component, by defining them within the component.
+See the third example below.</p>
 <p>Demo:</p>
 <p><example-url><a href="https://components.gomus.de/user/user.html">https://components.gomus.de/user/user.html</a></example-url></p>
 
@@ -431,9 +433,31 @@ To use append the following to the url on the page of the UserComponent:</p>
                     <pre class="line-numbers"><code class="language-html">&lt;go-user&gt;&lt;/go-user&gt;</code></pre>
                 </div>
                 <div>
+                    <pre class="line-numbers"><code class="language-html">&lt;go-user&gt;
+  &lt;go-user-content&gt;
+    &lt;div&gt;
+      &lt;h3&gt;Ich habe bereits ein Benutzerkonto.&lt;/h3&gt;
+      &lt;p&gt;Melden Sie sich einfach an.&lt;/p&gt;
+      &lt;go-user-login&gt;&lt;/go-user-login&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;h3&gt;Ich habe kein Benutzerkonto.&lt;/h3&gt;
+      &lt;p&gt;Das Anlegen eines Benutzerkontos dauert weniger als eine Minute.&lt;/p&gt;
+      &lt;button go-user-action=&quot;register&quot;&gt;Registrieren&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;h3&gt;Als Gast fortfahren&lt;/h3&gt;
+      &lt;p&gt;Schließen Sie Ihre Bestellung als Gast ab. Es sind persönliche Angaben erforderlich.&lt;/p&gt;
+      &lt;button go-user-action=&quot;guest&quot;&gt;Als Gast fortfahren&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/go-user-content&gt;
+&lt;/go-user&gt;</code></pre>
+                </div>
+                <div>
                     <pre class="line-numbers"><code class="language-html">&lt;go-user options=&quot;{}&quot;&gt;
-  &lt;go-user-registration&gt;&lt;/go-user-registration&gt;
-  &lt;go-user-guest&gt;&lt;/go-user-guest&gt;
+&lt;go-user-login&gt;&lt;/go-user-login&gt;
+&lt;go-user-registration&gt;&lt;/go-user-registration&gt;
+&lt;go-user-guest&gt;&lt;/go-user-guest&gt;
 &lt;/go-user&gt;</code></pre>
                 </div>
     </div>
@@ -448,30 +472,30 @@ To use append the following to the url on the page of the UserComponent:</p>
 
     <div class="tab-pane fade" id="templateData">
         <pre class="line-numbers"><code class="language-html">&lt;ng-container *ngIf&#x3D;&quot;!selected&quot;&gt;
-  &lt;ng-container *ngIf&#x3D;&quot;!template&quot;&gt;
+  &lt;ng-container *ngIf&#x3D;&quot;!content&quot;&gt;
     &lt;div&gt;
       &lt;h3&gt;Ich habe bereits ein Benutzerkonto.&lt;/h3&gt;
       &lt;p&gt;Melden Sie sich einfach an.&lt;/p&gt;
-      &lt;go-user-login&gt;&lt;/go-user-login&gt;
+      &lt;go-user-login *ngIf&#x3D;&quot;!custom.login&quot;&gt;&lt;/go-user-login&gt;
+      &lt;ng-content select&#x3D;&quot;go-user-login&quot; *ngIf&#x3D;&quot;custom.login&quot;&gt;&lt;/ng-content&gt;
     &lt;/div&gt;
     &lt;div&gt;
       &lt;h3&gt;Ich habe kein Benutzerkonto.&lt;/h3&gt;
       &lt;p&gt;Das Anlegen eines Benutzerkontos dauert weniger als eine Minute.&lt;/p&gt;
-      &lt;button type&#x3D;&quot;&quot; (click)&#x3D;&quot;onSelect(&#x27;register&#x27;)&quot;&gt;Registrieren&lt;/button&gt;
+      &lt;button go-user-action&#x3D;&quot;register&quot;&gt;Registrieren&lt;/button&gt;
     &lt;/div&gt;
     &lt;div&gt;
       &lt;h3&gt;Als Gast fortfahren&lt;/h3&gt;
       &lt;p&gt;Schließen Sie Ihre Bestellung als Gast ab. Es sind persönliche Angaben erforderlich.&lt;/p&gt;
-      &lt;button type&#x3D;&quot;&quot; (click)&#x3D;&quot;onSelect(&#x27;guest&#x27;)&quot;&gt;Als Gast fortfahren&lt;/button&gt;
+      &lt;button go-user-action&#x3D;&quot;guest&quot;&gt;Als Gast fortfahren&lt;/button&gt;
     &lt;/div&gt;
   &lt;/ng-container&gt;
-  &lt;ng-container *ngIf&#x3D;&quot;template&quot;&gt;
-    &lt;ng-container  *ngTemplateOutlet&#x3D;&quot;template; context: { $implicit: user }&quot;&gt;&lt;/ng-container&gt;
-  &lt;/ng-container&gt;
 &lt;/ng-container&gt;
-&lt;go-user-registration [goshow]&#x3D;&quot;default.register&quot;&gt;&lt;/go-user-registration&gt;
-&lt;go-user-guest [goshow]&#x3D;&quot;default.guest&quot;&gt;&lt;/go-user-guest&gt;
-&lt;ng-content&gt;&lt;/ng-content&gt;
+&lt;go-user-registration *ngIf&#x3D;&quot;default.register&quot;&gt;&lt;/go-user-registration&gt;
+&lt;go-user-guest *ngIf&#x3D;&quot;default.guest&quot;&gt;&lt;/go-user-guest&gt;
+&lt;ng-content select&#x3D;&quot;go-user-content&quot; *ngIf&#x3D;&quot;custom.content&quot;&gt;&lt;/ng-content&gt;
+&lt;ng-content select&#x3D;&quot;go-user-registration&quot; *ngIf&#x3D;&quot;custom.register&quot;&gt;&lt;/ng-content&gt;
+&lt;ng-content select&#x3D;&quot;go-user-guest&quot; *ngIf&#x3D;&quot;custom.guest&quot;&gt;&lt;/ng-content&gt;
 </code></pre>
     </div>
 
@@ -503,9 +527,9 @@ To use append the following to the url on the page of the UserComponent:</p>
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="!selected">  <ng-container *ngIf="!template">    <div>      <h3>Ich habe bereits ein Benutzerkonto.</h3>      <p>Melden Sie sich einfach an.</p>      <go-user-login></go-user-login>    </div>    <div>      <h3>Ich habe kein Benutzerkonto.</h3>      <p>Das Anlegen eines Benutzerkontos dauert weniger als eine Minute.</p>      <button type="" (click)="onSelect(\'register\')">Registrieren</button>    </div>    <div>      <h3>Als Gast fortfahren</h3>      <p>Schließen Sie Ihre Bestellung als Gast ab. Es sind persönliche Angaben erforderlich.</p>      <button type="" (click)="onSelect(\'guest\')">Als Gast fortfahren</button>    </div>  </ng-container>  <ng-container *ngIf="template">    <ng-container  *ngTemplateOutlet="template; context: { $implicit: user }"></ng-container>  </ng-container></ng-container><go-user-registration [goshow]="default.register"></go-user-registration><go-user-guest [goshow]="default.guest"></go-user-guest><ng-content></ng-content></div>'
+        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="!selected">  <ng-container *ngIf="!content">    <div>      <h3>Ich habe bereits ein Benutzerkonto.</h3>      <p>Melden Sie sich einfach an.</p>      <go-user-login *ngIf="!custom.login"></go-user-login>      <ng-content select="go-user-login" *ngIf="custom.login"></ng-content>    </div>    <div>      <h3>Ich habe kein Benutzerkonto.</h3>      <p>Das Anlegen eines Benutzerkontos dauert weniger als eine Minute.</p>      <button go-user-action="register">Registrieren</button>    </div>    <div>      <h3>Als Gast fortfahren</h3>      <p>Schließen Sie Ihre Bestellung als Gast ab. Es sind persönliche Angaben erforderlich.</p>      <button go-user-action="guest">Als Gast fortfahren</button>    </div>  </ng-container></ng-container><go-user-registration *ngIf="default.register"></go-user-registration><go-user-guest *ngIf="default.guest"></go-user-guest><ng-content select="go-user-content" *ngIf="custom.content"></ng-content><ng-content select="go-user-registration" *ngIf="custom.register"></ng-content><ng-content select="go-user-guest" *ngIf="custom.guest"></ng-content></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'body'},{'name': 'CartButtonComponent', 'selector': 'go-cart-button-container'},{'name': 'CartComponent', 'selector': 'go-cart'},{'name': 'CheckoutComponent', 'selector': 'go-checkout'},{'name': 'CheckoutFailureComponent', 'selector': 'go-checkout-failure'},{'name': 'CheckoutPendingComponent', 'selector': 'go-checkout-pending'},{'name': 'CheckoutSuccessComponent', 'selector': 'go-checkout-success'},{'name': 'InputErrorComponent', 'selector': 'go-input-error,[go-input-error]'},{'name': 'OptionComponent', 'selector': 'select[go-form-control]'},{'name': 'ProductBreadcrumbsComponent', 'selector': 'go-product-breadcrumbs,[go-product-breadcrumbs]'},{'name': 'ProductComponent', 'selector': 'go-product,[go-product]'},{'name': 'ProductDateComponent', 'selector': 'go-product-date,[go-product-date]'},{'name': 'ProductDetailComponent', 'selector': 'go-product-detail,[go-product-detail]'},{'name': 'ProductFiltersComponent', 'selector': 'go-product-filters,[go-product-filters]'},{'name': 'ProductInfoComponent', 'selector': 'go-product-info,[go-product-info]'},{'name': 'ProductListComponent', 'selector': 'go-product-list,[go-product-list]'},{'name': 'ProductPricesComponent', 'selector': 'go-product-prices,[go-product-prices]'},{'name': 'ProductTimeComponent', 'selector': 'go-product-time,[go-product-time]'},{'name': 'SelectComponent', 'selector': 'go-select'},{'name': 'TicketsBreadcrumbsComponent', 'selector': 'go-tickets-breadcrumbs,[go-tickets-breadcrumbs]'},{'name': 'TicketsComponent', 'selector': 'go-tickets,[go-tickets]'},{'name': 'TicketsDateComponent', 'selector': 'go-tickets-date,[go-tickets-date]'},{'name': 'TicketsTimeComponent', 'selector': 'go-tickets-time,[go-tickets-time]'},{'name': 'TicketsTypeComponent', 'selector': 'go-tickets-type,[go-tickets-type]'},{'name': 'TotalComponent', 'selector': 'go-total'},{'name': 'UserComponent', 'selector': 'go-user'},{'name': 'UserGuestComponent', 'selector': 'go-user-guest'},{'name': 'UserLoginComponent', 'selector': 'go-user-login'},{'name': 'UserRegistrationComponent', 'selector': 'go-user-registration'},{'name': 'UserToolbarComponent', 'selector': 'go-user-toolbar'}];
-    var DIRECTIVES = [{'name': 'CheckoutFailureActionDirective', 'selector': '[go-checkout-failure-action]'},{'name': 'CheckoutSuccessActionDirective', 'selector': '[go-checkout-success-action]'},{'name': 'GoCheckboxControlValueAccessor', 'selector': 'input[type&#x3D;checkbox][go-form-control]'},{'name': 'GoControlStatus', 'selector': '[go-form-control]'},{'name': 'GoControlStatusGroup', 'selector': '[formGroupName],[formArrayName],[ngModelGroup],[formGroup],[ngForm]'},{'name': 'GoDefaultValueAccessor', 'selector': 'input:not([type&#x3D;&quot;checkbox&quot;])[go-form-control]'},{'name': 'GoFormControlDirective', 'selector': 'input[go-form-control], select[go-form-control]'},{'name': 'GoSelectControlValueAccessor', 'selector': 'select[go-form-control]'},{'name': 'InputContainerDirective', 'selector': 'go-input-container,[go-input-container]'},{'name': 'ProductDateContainerDirective', 'selector': 'go-product-date-container,[go-product-date-container]'},{'name': 'ProductPricesContainerDirective', 'selector': 'go-product-prices-container,[go-product-prices-container]'},{'name': 'ProductPricesDirective', 'selector': '[go-product-prices-item]'},{'name': 'ProductTimeContainerDirective', 'selector': 'go-product-time-container,[go-product-time-container]'},{'name': 'TicketsDateContainerDirective', 'selector': 'go-tickets-date-container,[go-tickets-date-container]'},{'name': 'TicketsTimeContainerDirective', 'selector': 'go-tickets-time-container,[go-tickets-time-container]'},{'name': 'TicketsTypeContainerDirective', 'selector': 'go-tickets-type-container,[go-tickets-type-container]'},{'name': 'TicketsTypeItemDirective', 'selector': '[go-tickets-type-item]'}];
+    var DIRECTIVES = [{'name': 'CheckoutFailureActionDirective', 'selector': '[go-checkout-failure-action]'},{'name': 'CheckoutSuccessActionDirective', 'selector': '[go-checkout-success-action]'},{'name': 'GoCheckboxControlValueAccessor', 'selector': 'input[type&#x3D;checkbox][go-form-control]'},{'name': 'GoControlStatus', 'selector': '[go-form-control]'},{'name': 'GoControlStatusGroup', 'selector': '[formGroupName],[formArrayName],[ngModelGroup],[formGroup],[ngForm]'},{'name': 'GoDefaultValueAccessor', 'selector': 'input:not([type&#x3D;&quot;checkbox&quot;])[go-form-control]'},{'name': 'GoFormControlDirective', 'selector': 'input[go-form-control], select[go-form-control]'},{'name': 'GoSelectControlValueAccessor', 'selector': 'select[go-form-control]'},{'name': 'InputContainerDirective', 'selector': 'go-input-container,[go-input-container]'},{'name': 'ProductDateContainerDirective', 'selector': 'go-product-date-container,[go-product-date-container]'},{'name': 'ProductPricesContainerDirective', 'selector': 'go-product-prices-container,[go-product-prices-container]'},{'name': 'ProductPricesDirective', 'selector': '[go-product-prices-item]'},{'name': 'ProductTimeContainerDirective', 'selector': 'go-product-time-container,[go-product-time-container]'},{'name': 'TicketsDateContainerDirective', 'selector': 'go-tickets-date-container,[go-tickets-date-container]'},{'name': 'TicketsTimeContainerDirective', 'selector': 'go-tickets-time-container,[go-tickets-time-container]'},{'name': 'TicketsTypeContainerDirective', 'selector': 'go-tickets-type-container,[go-tickets-type-container]'},{'name': 'TicketsTypeItemDirective', 'selector': '[go-tickets-type-item]'},{'name': 'UserActionDirective', 'selector': '[go-user-action]'},{'name': 'UserContentDirective', 'selector': 'go-user-content,[go-user-content]'}];
     var ACTUAL_COMPONENT = {'name': 'UserComponent'};
 </script>
 <script src="../js/tree.js"></script>
