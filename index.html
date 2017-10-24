@@ -364,7 +364,9 @@ Detail documentation for this variable can be found under: <a href="https://gian
 <ul>
 <li>load component script at end of body</li>
 <li>hide <code>ng-template</code> elements using css</li>
-<li>provide a loading state for components until the <code>components.js</code> script has finished loading. A <code>gomus-components:loaded</code> event is fired when the initialisation is completed.</li>
+<li>provide a loading state for components until the <code>components.js</code> script has finished loading. A <code>gomus-components:loaded</code> event is fired on the document when the initialisation is completed. For example:<pre class="line-numbers"><code class="language-js">document.addEventListener(&#39;gomus-components:loaded&#39;, function () {
+ console.log(&#39;loaded&#39;);
+});</code></pre></li>
 </ul>
 <h2 id="top-level-components">Top level components</h2>
 <table class="table table-bordered compodoc-table">
