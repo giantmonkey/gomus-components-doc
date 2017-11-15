@@ -374,21 +374,21 @@ and selected using the user url parameter: <code>#/?user=register</code></p>
 <li>Errors for input fields can be displayed using the <code>go-input-error</code> directive and passing the model name into it.</li>
 <li>Submit buttons must have the type <code>submit</code>. The <code>go-submit</code> directive will be used in the future to add more functionality.</li>
 </ul>
-<p>The following go~mus user model parameters are available:</p>
+<p>The following go~mus user model parameters are available (* are required):</p>
 <ul>
 <li><code>customer_salutation_id</code></li>
-<li><code>name</code></li>
-<li><code>surname</code></li>
-<li><code>email</code></li>
-<li><code>email_confirmation</code></li>
-<li><code>password</code></li>
-<li><code>password_confirmation</code></li>
+<li><code>name*</code></li>
+<li><code>surname*</code></li>
+<li><code>email*</code></li>
+<li><code>email_confirmation*</code></li>
+<li><code>password*</code></li>
+<li><code>password_confirmation*</code></li>
 <li><code>adressat</code></li>
-<li><code>street</code></li>
-<li><code>city</code></li>
-<li><code>addr_zip</code></li>
+<li><code>street*</code></li>
+<li><code>city*</code></li>
+<li><code>addr_zip*</code></li>
 <li><code>country</code></li>
-<li><code>terms</code></li>
+<li><code>terms*</code></li>
 <li><code>wants_newsletter</code></li>
 </ul>
 
@@ -524,96 +524,6 @@ and selected using the user url parameter: <code>#/?user=register</code></p>
 
 
 
-    <section>
-        
-            <h3 id="methods">
-                Methods
-            </h3>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <b> handleErrors</b>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-    <code>handleErrors(errors: )</code>
-                        </td>
-                    </tr>
-    
-    
-    
-                    <tr>
-                        <td class="col-md-4">
-    
-                                <div class="io-description">
-                                        <b>Parameters :</b>
-                                        <ul class="jsdoc-params">
-                                                <li>
-                                                    <div>
-                                                        <b>errors</b>
-                                                    </div>
-                                                    <div>
-                                                        
-                                                    </div>
-                                                </li>
-                                        </ul>
-                                </div>
-                                <div class="io-description">
-                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-    
-                                </div>
-                                    <div class="io-description">
-                                        
-                                    </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <b> onSubmit</b>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-    <code>onSubmit(userForm: )</code>
-                        </td>
-                    </tr>
-    
-    
-    
-                    <tr>
-                        <td class="col-md-4">
-    
-                                <div class="io-description">
-                                        <b>Parameters :</b>
-                                        <ul class="jsdoc-params">
-                                                <li>
-                                                    <div>
-                                                        <b>userForm</b>
-                                                    </div>
-                                                    <div>
-                                                        
-                                                    </div>
-                                                </li>
-                                        </ul>
-                                </div>
-                                <div class="io-description">
-                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-    
-                                </div>
-                                    <div class="io-description">
-                                        
-                                    </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-    </section>
 
     <section>
         
@@ -624,52 +534,27 @@ and selected using the user url parameter: <code>#/?user=register</code></p>
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <b> contentChildren</b>
+                            <b> _options</b>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <code>contentChildren:     <code>QueryList&lt;GoFormControlDirective&gt;</code>
+                            <code>_options:     <code><a href="../interfaces/User.html" target="_self" >UserOptions</a></code>
     </bcode>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                <i>Type : </i>    <code>QueryList&lt;GoFormControlDirective&gt;</code>
+                                <i>Type : </i>    <code><a href="../interfaces/User.html" target="_self" >UserOptions</a></code>
     
                             </td>
                         </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Decorators : </i><code>ContentChildren</code>
-                            </td>
-                        </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <b> viewChildren</b>
+                          <div class="io-description">
+                          </div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <code>viewChildren:     <code>QueryList&lt;GoFormControlDirective&gt;</code>
-    </bcode>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Type : </i>    <code>QueryList&lt;GoFormControlDirective&gt;</code>
-    
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Decorators : </i><code>ViewChildren</code>
-                            </td>
-                        </tr>
                 </tbody>
             </table>
     </section>
