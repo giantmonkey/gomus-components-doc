@@ -145,6 +145,9 @@
                                     <a href="../components/UserLoginComponent.html" >UserLoginComponent</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/UserPasswordResetComponent.html" >UserPasswordResetComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/UserRegistrationComponent.html" >UserRegistrationComponent</a>
                                 </li>
                                 <li class="link">
@@ -300,6 +303,9 @@
                                            <a href="../components/UserLoginComponent.html" >UserLoginComponent</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../components/UserPasswordResetComponent.html" >UserPasswordResetComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/UserRegistrationComponent.html" >UserRegistrationComponent</a>
                                        </li>
                                        <li class="link">
@@ -387,7 +393,67 @@
                                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>URL for when the user is in the checkout process.</p>
+                                    <div class="io-description"><p>Redirect URL for when the user is in the checkout process.</p>
+            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                  <div class="io-description">
+                                  </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b> guest_url</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <code>guest_url:     <code></code>
+            </bcode>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Redirect URL for when the user submits his/her guest registration</p>
+            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                  <div class="io-description">
+                                  </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b> login_url</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <code>login_url:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+            </bcode>
+                                </td>
+                            </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+            
+                                    </td>
+                                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Redirect URL for when the user logs in</p>
             </div>
                                 </td>
                             </tr>
@@ -441,6 +507,60 @@
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
+                                    <b> password_reset_url</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <code>password_reset_url:     <code></code>
+            </bcode>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Redirect URL for when the user resets his/her password</p>
+            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                  <div class="io-description">
+                                  </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b> registration_url</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <code>registration_url:     <code></code>
+            </bcode>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Redirect URL for when the user registers</p>
+            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                  <div class="io-description">
+                                  </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
                                     <b> url</b>
                                 </td>
                             </tr>
@@ -458,12 +578,13 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <i>Default value : </i><code>/user</code>
+                                        <i>Default value : </i><code>/</code>
                                     </td>
                                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>IMPORTANT: please notify us of your chosen user url so we can configure go~mus with the correct redirects.</p>
+                                    <div class="io-description"><p>Redirect URL for when the user logs in</p>
+            <p><em>DEPRECATED: please use login_url</em></p>
             </div>
                                 </td>
                             </tr>
