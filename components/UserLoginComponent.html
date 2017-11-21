@@ -442,83 +442,51 @@ and selected using the user url parameter: <code>#/?user=login</code></p>
                 </div>
                 <div>
                     <pre class="line-numbers"><code class="language-html">&lt;go-user-login&gt;
-      &lt;div go-input-container&gt;
-        &lt;label&gt;E-Mail&lt;/label&gt;
-        &lt;input type=&quot;email&quot; go-form-control=&quot;email&quot; required&gt;
-        &lt;div go-input-error=&quot;email&quot;&gt;&lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div go-input-container&gt;
-        &lt;label&gt;Passwort&lt;/label&gt;
-        &lt;input type=&quot;password&quot; go-form-control=&quot;password&quot; required&gt;
-        &lt;div go-input-error=&quot;password&quot;&gt;&lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div go-input-error&gt;&lt;/div&gt;
-      &lt;button type=&quot;button&quot; go-user-action=&quot;password-reset&quot;&gt;Passwort vergessen?&lt;/button&gt;
-      &lt;button type=&quot;submit&quot; go-submit&gt;Anmelden&lt;/button&gt;
+    &lt;div go-input-container&gt;
+      &lt;label&gt;E-Mail&lt;/label&gt;
+      &lt;input type=&quot;email&quot; go-form-control=&quot;email&quot; required&gt;
+      &lt;div go-input-error=&quot;email&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div go-input-container&gt;
+      &lt;label&gt;Passwort&lt;/label&gt;
+      &lt;input type=&quot;password&quot; go-form-control=&quot;password&quot; required&gt;
+      &lt;div go-input-error=&quot;password&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div go-input-error&gt;&lt;/div&gt;
+    &lt;button type=&quot;button&quot; go-user-action=&quot;password-reset&quot;&gt;Passwort vergessen?&lt;/button&gt;
+    &lt;button type=&quot;submit&quot; go-submit&gt;Anmelden&lt;/button&gt;
 &lt;/go-user-login&gt;</code></pre>
                 </div>
                 <div>
                     <pre class="line-numbers"><code class="language-html">&lt;go-user-login&gt;
+   &lt;div go-input-container&gt;
+     &lt;label&gt;E-Mail&lt;/label&gt;
+     &lt;input type=&quot;email&quot; go-form-control=&quot;email&quot; required&gt;
+     &lt;div go-input-error=&quot;email&quot;&gt;&lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div go-input-container&gt;
+     &lt;label&gt;Passwort&lt;/label&gt;
+     &lt;input type=&quot;password&quot; go-form-control=&quot;password&quot; required&gt;
+     &lt;div go-input-error=&quot;password&quot;&gt;&lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div go-input-error&gt;&lt;/div&gt;
+   &lt;button type=&quot;button&quot; go-user-action=&quot;password-reset&quot;&gt;Passwort vergessen?&lt;/button&gt;
+   &lt;button type=&quot;submit&quot; go-submit&gt;Anmelden&lt;/button&gt;
+   &lt;go-user-password-reset&gt;
      &lt;div go-input-container&gt;
        &lt;label&gt;E-Mail&lt;/label&gt;
        &lt;input type=&quot;email&quot; go-form-control=&quot;email&quot; required&gt;
        &lt;div go-input-error=&quot;email&quot;&gt;&lt;/div&gt;
      &lt;/div&gt;
-     &lt;div go-input-container&gt;
-       &lt;label&gt;Passwort&lt;/label&gt;
-       &lt;input type=&quot;password&quot; go-form-control=&quot;password&quot; required&gt;
-       &lt;div go-input-error=&quot;password&quot;&gt;&lt;/div&gt;
-     &lt;/div&gt;
-     &lt;div go-input-error&gt;&lt;/div&gt;
-     &lt;button type=&quot;button&quot; go-user-action=&quot;password-reset&quot;&gt;Passwort vergessen?&lt;/button&gt;
-     &lt;button type=&quot;submit&quot; go-submit&gt;Anmelden&lt;/button&gt;
-     &lt;go-user-password-reset&gt;
-       &lt;div go-input-container&gt;
-         &lt;label&gt;E-Mail&lt;/label&gt;
-         &lt;input type=&quot;email&quot; go-form-control=&quot;email&quot; required&gt;
-         &lt;div go-input-error=&quot;email&quot;&gt;&lt;/div&gt;
-       &lt;/div&gt;
-       &lt;div go-input-error class=&quot;go-error-block&quot;&gt;&lt;/div&gt;
-       &lt;button type=&quot;submit&quot; go-submit&gt;Passwort-Reset anfordern&lt;/button&gt;
-     &lt;/go-user-password-reset&gt;
+     &lt;div go-input-error class=&quot;go-error-block&quot;&gt;&lt;/div&gt;
+     &lt;button type=&quot;submit&quot; go-submit&gt;Passwort-Reset anfordern&lt;/button&gt;
+   &lt;/go-user-password-reset&gt;
 &lt;/go-user-login&gt;</code></pre>
                 </div>
     </div>
 
 
 
-    <section>
-        
-            <h3 id="methods">
-                Methods
-            </h3>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <b> updateChildren</b>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-    <code>updateChildren()</code>
-                        </td>
-                    </tr>
-    
-    
-    
-                    <tr>
-                        <td class="col-md-4">
-    
-                                <div class="io-description">
-                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-    
-                                </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-    </section>
 
 
 </div>
