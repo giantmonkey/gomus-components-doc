@@ -17,7 +17,7 @@ function setUpVersions() {
     var selectedIndex = 1;
     options.forEach( (option, index) => {
       optionList.add( new Option(option.text, option.value ));
-      option.value === '/' + version + '/' ? selectedIndex = index : null;
+      option.value === '/gomus-components-doc/' + version + '/' ? selectedIndex = index : null;
     });
     select.selectedIndex = selectedIndex;
     if (select.selectedIndex == 0) {
