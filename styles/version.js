@@ -12,7 +12,7 @@ function setUpVersions() {
         "value" : "/gomus-components-doc/"
       }
     ];
-    var version = location.pathname.split('/')[1]
+    var version = location.pathname.split('/')[2]
 
     var selectedIndex = 1;
     options.forEach( (option, index) => {
