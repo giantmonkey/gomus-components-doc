@@ -5,11 +5,11 @@ function setUpVersions() {
     var options = [
       {
         "text"  : "next (v1 - beta)",
-        "value" : "/next/"
+        "value" : "/gomus-components-doc/next/"
       },
       {
-        "text"     : "stable",
-        "value"    : "/"
+        "text"  : "stable",
+        "value" : "/gomus-components-doc/"
       }
     ];
     var version = location.pathname.split('/')[1]
