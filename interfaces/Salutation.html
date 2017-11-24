@@ -7,8 +7,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	    <link rel="stylesheet" href="../styles/style.css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+	    <link rel="stylesheet" href="/styles/style.css">
     </head>
     <body>
 
@@ -25,11 +25,17 @@
             
                 <ul class="list">
             
-                    <li class="copyright">
+                    <li class="copyright logo">
                         <img  src="http://gomus.de/wp-content/uploads/2016/06/gomus_label_300x300.png" width="100" height="100" alt="" class="img-responsive">
                     </li>
             
                     <li class="divider"></li>
+                    <form>
+                      <div class="form-group">
+                        <select  class="form-control version-select" id="version">
+                        </select>
+                      </div>
+                    </form>
             
             
                     <li class="chapter">
@@ -47,6 +53,31 @@
                         </ul>
                     </li>
             
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-additional-pages"
+                            >
+                            <span class="fa fa-book"></span>
+                            <span>Documentation</span>
+                            <span class="fa fa-angle-up"></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-additional-pages"
+                            >
+                                <li class="link ">
+                                    <a href="../additional-documentation/getting-started.html" >Getting Started</a>
+                                </li>
+                                <li class="link ">
+                                    <a href="../additional-documentation/best-practices.html" >Best Practices</a>
+                                </li>
+                                <li class="link ">
+                                    <a href="../additional-documentation/top-level-components.html" >Top Level Components</a>
+                                </li>
+                                <li class="link ">
+                                    <a href="../additional-documentation/setup-&amp;-deployment.html" >Setup &amp; Deployment</a>
+                                </li>
+                        </ul>
+                    </li>
             
             
                     <li class="chapter">
@@ -60,9 +91,6 @@
                         <ul class="links collapse "
                                 id="xs-components-links"
                             >
-                                <li class="link">
-                                    <a href="../components/AppComponent.html" >AppComponent</a>
-                                </li>
                                 <li class="link">
                                     <a href="../components/CartButtonComponent.html" >CartButtonComponent</a>
                                 </li>
@@ -162,6 +190,13 @@
             
             
                     <li class="divider"></li>
+                    <li class="chapter issue">
+                        <h6>Found something wrong or missing?</h6>
+                        <h6>Tell us!</h6>
+                        <a href="https://github.com/giantmonkey/gomus-components-doc/issues/new?title=Docs: Salutation&body=Related%20page:%20[Salutation]()&labels=documentation" role="tab" target="_blank" ><button class="btn btn-success" >Create issue</button></a>
+                    </li>
+            
+                    <li class="divider"></li>
                     <li class="copyright">
                             Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
                                         <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
@@ -180,11 +215,17 @@
                    
                        <ul class="list">
                    
-                           <li class="copyright">
+                           <li class="copyright logo">
                                <img  src="http://gomus.de/wp-content/uploads/2016/06/gomus_label_300x300.png" width="100" height="100" alt="" class="img-responsive">
                            </li>
                    
                            <li class="divider"></li>
+                           <form>
+                             <div class="form-group">
+                               <select  class="form-control version-select" id="version">
+                               </select>
+                             </div>
+                           </form>
                    
                                <div id="book-search-input" role="search">
                                    <input type="text" placeholder="Type to search">
@@ -205,6 +246,31 @@
                                </ul>
                            </li>
                    
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#additional-pages"
+                   >
+                                   <span class="fa fa-book"></span>
+                                   <span>Documentation</span>
+                                   <span class="fa fa-angle-up"></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="additional-pages"
+                   >
+                                       <li class="link ">
+                                           <a href="../additional-documentation/getting-started.html" >Getting Started</a>
+                                       </li>
+                                       <li class="link ">
+                                           <a href="../additional-documentation/best-practices.html" >Best Practices</a>
+                                       </li>
+                                       <li class="link ">
+                                           <a href="../additional-documentation/top-level-components.html" >Top Level Components</a>
+                                       </li>
+                                       <li class="link ">
+                                           <a href="../additional-documentation/setup-&amp;-deployment.html" >Setup &amp; Deployment</a>
+                                       </li>
+                               </ul>
+                           </li>
                    
                    
                            <li class="chapter">
@@ -218,9 +284,6 @@
                                <ul class="links collapse "
                                        id="components-links"
                    >
-                                       <li class="link">
-                                           <a href="../components/AppComponent.html" >AppComponent</a>
-                                       </li>
                                        <li class="link">
                                            <a href="../components/CartButtonComponent.html" >CartButtonComponent</a>
                                        </li>
@@ -318,6 +381,13 @@
                    
                    
                    
+                   
+                           <li class="divider"></li>
+                           <li class="chapter issue">
+                               <h6>Found something wrong or missing?</h6>
+                               <h6>Tell us!</h6>
+                               <a href="https://github.com/giantmonkey/gomus-components-doc/issues/new?title=Docs: Salutation&body=Related%20page:%20[Salutation]()&labels=documentation" role="tab" target="_blank" ><button class="btn btn-success" >Create issue</button></a>
+                           </li>
                    
                            <li class="divider"></li>
                            <li class="copyright">
@@ -466,26 +536,27 @@
            </div>
        </div>
 
-       <script src="../js/libs/bootstrap-native.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/libs/bootstrap-native.js"></script>
 
-       <script src="../js/libs/es6-shim.min.js"></script>
-       <script src="../js/libs/EventDispatcher.js"></script>
-       <script src="../js/libs/promise.min.js"></script>
-       <script src="../js/libs/zepto.min.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/libs/es6-shim.min.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/libs/EventDispatcher.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/libs/promise.min.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/libs/zepto.min.js"></script>
 
-       <script src="../js/compodoc.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/compodoc.js"></script>
 
        <script>var COMPODOC_CURRENT_PAGE_DEPTH = 1;</script>
 
-       <script src="../js/search/search.js"></script>
-       <script src="../js/search/lunr.min.js"></script>
-       <script src="../js/search/search-lunr.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/search/search.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/search/lunr.min.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/search/search-lunr.js"></script>
 
-       <script src="../js/tabs.js"></script>
-       <script src="../js/menu.js"></script>
-       <script src="../js/libs/prism.js"></script>
-       <script src="../js/sourceCode.js"></script>
-       <script src="../js/search/search_index.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/tabs.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/menu.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/libs/prism.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/sourceCode.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/search/search_index.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/version.js"></script>
 
     </body>
 </html>

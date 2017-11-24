@@ -7,8 +7,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-	    <link rel="stylesheet" href="./styles/style.css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+	    <link rel="stylesheet" href="/styles/style.css">
     </head>
     <body>
 
@@ -25,11 +25,17 @@
             
                 <ul class="list">
             
-                    <li class="copyright">
+                    <li class="copyright logo">
                         <img  src="http://gomus.de/wp-content/uploads/2016/06/gomus_label_300x300.png" width="100" height="100" alt="" class="img-responsive">
                     </li>
             
                     <li class="divider"></li>
+                    <form>
+                      <div class="form-group">
+                        <select  class="form-control version-select" id="version">
+                        </select>
+                      </div>
+                    </form>
             
             
                     <li class="chapter">
@@ -47,6 +53,31 @@
                         </ul>
                     </li>
             
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-additional-pages"
+                            >
+                            <span class="fa fa-book"></span>
+                            <span>Documentation</span>
+                            <span class="fa fa-angle-up"></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-additional-pages"
+                            >
+                                <li class="link ">
+                                    <a href="./additional-documentation/getting-started.html" >Getting Started</a>
+                                </li>
+                                <li class="link ">
+                                    <a href="./additional-documentation/best-practices.html" >Best Practices</a>
+                                </li>
+                                <li class="link ">
+                                    <a href="./additional-documentation/top-level-components.html" >Top Level Components</a>
+                                </li>
+                                <li class="link ">
+                                    <a href="./additional-documentation/setup-&amp;-deployment.html" >Setup &amp; Deployment</a>
+                                </li>
+                        </ul>
+                    </li>
             
             
                     <li class="chapter">
@@ -60,9 +91,6 @@
                         <ul class="links collapse "
                                 id="xs-components-links"
                             >
-                                <li class="link">
-                                    <a href="./components/AppComponent.html" >AppComponent</a>
-                                </li>
                                 <li class="link">
                                     <a href="./components/CartButtonComponent.html" >CartButtonComponent</a>
                                 </li>
@@ -162,6 +190,13 @@
             
             
                     <li class="divider"></li>
+                    <li class="chapter issue">
+                        <h6>Found something wrong or missing?</h6>
+                        <h6>Tell us!</h6>
+                        <a href="https://github.com/giantmonkey/gomus-components-doc/issues/new?title=Docs: index&body=Related%20page:%20[index]()&labels=documentation" role="tab" target="_blank" ><button class="btn btn-success" >Create issue</button></a>
+                    </li>
+            
+                    <li class="divider"></li>
                     <li class="copyright">
                             Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
                                         <img src=".//images/compodoc-vectorise.svg" class="img-responsive">
@@ -180,11 +215,17 @@
                    
                        <ul class="list">
                    
-                           <li class="copyright">
+                           <li class="copyright logo">
                                <img  src="http://gomus.de/wp-content/uploads/2016/06/gomus_label_300x300.png" width="100" height="100" alt="" class="img-responsive">
                            </li>
                    
                            <li class="divider"></li>
+                           <form>
+                             <div class="form-group">
+                               <select  class="form-control version-select" id="version">
+                               </select>
+                             </div>
+                           </form>
                    
                                <div id="book-search-input" role="search">
                                    <input type="text" placeholder="Type to search">
@@ -205,6 +246,31 @@
                                </ul>
                            </li>
                    
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#additional-pages"
+                   >
+                                   <span class="fa fa-book"></span>
+                                   <span>Documentation</span>
+                                   <span class="fa fa-angle-up"></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="additional-pages"
+                   >
+                                       <li class="link ">
+                                           <a href="./additional-documentation/getting-started.html" >Getting Started</a>
+                                       </li>
+                                       <li class="link ">
+                                           <a href="./additional-documentation/best-practices.html" >Best Practices</a>
+                                       </li>
+                                       <li class="link ">
+                                           <a href="./additional-documentation/top-level-components.html" >Top Level Components</a>
+                                       </li>
+                                       <li class="link ">
+                                           <a href="./additional-documentation/setup-&amp;-deployment.html" >Setup &amp; Deployment</a>
+                                       </li>
+                               </ul>
+                           </li>
                    
                    
                            <li class="chapter">
@@ -218,9 +284,6 @@
                                <ul class="links collapse "
                                        id="components-links"
                    >
-                                       <li class="link">
-                                           <a href="./components/AppComponent.html" >AppComponent</a>
-                                       </li>
                                        <li class="link">
                                            <a href="./components/CartButtonComponent.html" >CartButtonComponent</a>
                                        </li>
@@ -320,6 +383,13 @@
                    
                    
                            <li class="divider"></li>
+                           <li class="chapter issue">
+                               <h6>Found something wrong or missing?</h6>
+                               <h6>Tell us!</h6>
+                               <a href="https://github.com/giantmonkey/gomus-components-doc/issues/new?title=Docs: index&body=Related%20page:%20[index]()&labels=documentation" role="tab" target="_blank" ><button class="btn btn-success" >Create issue</button></a>
+                           </li>
+                   
+                           <li class="divider"></li>
                            <li class="copyright">
                                    Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
                                                <img src=".//images/compodoc-vectorise.svg" class="img-responsive">
@@ -336,102 +406,27 @@
 <h1 id="go-mus-components">go~mus components</h1>
 <!-- [![build status](https://giantmonkey.githost.io/gomus/components/badges/master/build.svg)](https://giantmonkey.githost.io/gomus/components/commits/master) -->
 <!-- [![coverage report](https://giantmonkey.githost.io/gomus/components/badges/master/coverage.svg)](https://giantmonkey.githost.io/gomus/components/commits/master) -->
-<h2 id="description">Description</h2>
-<p>go~mus components is a project that allows you to embed small widget-like components into your existing website to enable the buying of tickets, events and tours.</p>
+<h2 id="what-is-go-mus-components-">What is go~mus components?</h2>
+<p><a href="https://gomus.de">go~mus</a> is a web-based software for visitor management in museums and cultural institutions. It provides the means of selling tickets or products online through different add-ons such as through an online shop or using the API.</p>
+<p>These cover both extremes of the spectrum:</p>
+<ul>
+<li>The <a href="https://gomus.de/en/shop-en/">online shop</a> allows you to hit the ground running and start selling as soon as possible, but has often the disadvantage of double content management and navigating your users away from your website.</li>
+<li>The <a href="https://gomus.de/en/api-en/">API</a> allows you to build a fully integrated application to whatever system you are currently using, but has the disadvantage of taking more time and resources to set up.</li>
+</ul>
+<p>go~mus components is a project that aims to meet you in the middle. It abstracts away the complicated logic that needs to happen in order to sell tickets and products from go~mus, and provides you a simple HTML API to use instead while still allowing a lot of customisation.</p>
+<p>Simply put, it allows you to embed small widget-like components into your existing website to enable the selling of tickets, events and tours from <a href="https://gomus.de">go~mus</a>.</p>
+<h2 id="assumptions">Assumptions</h2>
+<p>This documentation assumes that you are already familiar with <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML</a> and have a basic understanding of <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript">JavaScript</a> and <a href="https://www.json.org/">JSON</a>. The code samples are written in HTML5, JSON and the latest JavaScript.</p>
+<h2 id="compatibility">Compatibility</h2>
+<p>This project is compatible with version 4 of the go~mus API. The documentation for which can be found online under: <a href="https://giantmonkey.github.io/gomus-api-doc">https://giantmonkey.github.io/gomus-api-doc</a></p>
+<p><em>For browser compatibility please see the <a href="./additional-documentation/setup-&amp;-deployment.html#browser-support">browser support</a> section under <a href="./additional-documentation/setup-&amp;-deployment.html">setup and deployment</a>.</em></p>
 <h2 id="project-status">Project status</h2>
 <p>go~mus components is currently in beta and under active development. During beta, new features will be added regularly and APIs will evolve based on user feedback.</p>
-<p>Stable and experimental components and their APIs are marked using the <code>@stable</code> and <code>@experimental</code> flags.</p>
-<h2 id="compatibility">Compatibility</h2>
-<p>This project is compatible with version 4 of the go~mus API. The documentation for which can be found under: <a href="https://giantmonkey.github.io/gomus-api-doc">https://giantmonkey.github.io/gomus-api-doc</a></p>
-<h2 id="getting-started">Getting started</h2>
-<p>Getting started is easy and simple. Simply load go~mus component javascript file with your custom config in the <code>_gomusOptions</code> variable.
-Detail documentation for this variable can be found under: <a href="https://giantmonkey.github.io/gomus-components-doc/classes/GomusOptions.html">https://giantmonkey.github.io/gomus-components-doc/classes/GomusOptions.html</a></p>
-<p><em>NOTE:</em> The config variable needs to load first before the script.</p>
-<p>For best results, load at the end of body.</p>
-<pre class="line-numbers"><code class="language-javascript">&lt;script type=&quot;text/javascript&quot;&gt;
-  var _gomusOptions = {
-    domain: &quot;demo.gomus.de&quot;,
-    shop_domain: &quot;components.gomus.de&quot;,
-    locale: &quot;de&quot;,
-    payment_mode_ids: {
-      default: 2
-    }
-  };
-&lt;/script&gt;
-&lt;script src=&quot;https://components.gomus.de/components.js&quot;&gt;&lt;/script&gt;</code></pre><p>You can then start adding components into your webpage.</p>
-<p>Components are often made up of multiple inner components. These inner components are optional (default templates with be used instead if not specified), and any element can be used apart from for images.</p>
-<p>Templates can be overwritten using the <code>ng-template</code> syntax, shown in the examples.</p>
-<p><em>NOTE:</em> To hide the contents of ng-tepmlate before go~mus components is loaded you can use css:</p>
-<pre class="line-numbers"><code class="language-css">ng-template {
-  display: none;
-}</code></pre><p>Options can be passed in the main component elements as valid <a href="http://www.json.org/"><code>json objects</code></a>.</p>
-<p>Custom tables for dynamic component parts are not possible due to strict browser rules. Flex or other css will need to be used instead.</p>
-<h2 id="best-practices">Best Practices</h2>
-<ul>
-<li>load component script at end of body</li>
-<li>hide <code>ng-template</code> elements using css</li>
-<li>provide a loading state for components until the <code>components.js</code> script has finished loading. A <code>gomus-components:loaded</code> event is fired on the document when the initialisation is completed. For example:<pre class="line-numbers"><code class="language-js">document.addEventListener(&#39;gomus-components:loaded&#39;, function () {
- console.log(&#39;loaded&#39;);
-});</code></pre></li>
-</ul>
-<h2 id="top-level-components">Top level components</h2>
-<table class="table table-bordered compodoc-table">
-<thead>
-<tr>
-<th>Main components</th>
-<th>Description</th>
-<th>Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="components/TicketsComponent.html">TicketsComponent</a></td>
-<td>Allows the buying of tickets</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="components/ProductComponent.html">ProductsComponent</a></td>
-<td>Allows the buying of products (events and tours)</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="components/ProductDetailComponent.html">ProductDetailComponent</a></td>
-<td>Displays the details of a single product (event or tour)</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="components/ProductListComponent.html">ProductListComponent</a></td>
-<td>Displays a list of products (events and tours)</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="components/CartComponent.html">CartComponent</a></td>
-<td>Displays a shopping cart</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="components/CartButtonComponent.html">CartButtonComponent</a></td>
-<td>Displays a link to the shopping cart with summary information</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="components/UserComponent.html">UserComponent</a></td>
-<td>Allows the logging in of and registering of users</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="components/UserToolbarComponent.html">UserToolbarComponent</a></td>
-<td>Displays login and logout buttons</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="components/CheckoutComponent.html">CheckoutComponent</a></td>
-<td>Handles the checkout process and displaying of checkout states</td>
-</tr>
-</tbody>
-</table>
-<h2 id="browser-support">Browser support</h2>
-<p>go~mus supports the most recent two versions of all major browsers: Chrome (including Android), Firefox, Safari (including iOS), and IE11 / Edge</p>
+<p><em>IMPORTANT: Custom tables for dynamic component parts are not possible due to strict browser rules. Flex or other CSS will need to be used instead.</em></p>
+<!-- Stable and experimental components and their APIs are marked using the `@stable` and `@experimental` flags. -->
+<h2 id="feedback">Feedback</h2>
+<p>You can help us!</p>
+<p>You can <a href="https://github.com/giantmonkey/gomus-components-doc/issues/new">create issues</a>, albeit documentation issues or code issues, on the <a href="https://github.com/giantmonkey/gomus-components-doc">Components Github repository</a>.</p>
 
 
 
@@ -458,26 +453,27 @@ Detail documentation for this variable can be found under: <a href="https://gian
            </div>
        </div>
 
-       <script src="./js/libs/bootstrap-native.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/libs/bootstrap-native.js"></script>
 
-       <script src="./js/libs/es6-shim.min.js"></script>
-       <script src="./js/libs/EventDispatcher.js"></script>
-       <script src="./js/libs/promise.min.js"></script>
-       <script src="./js/libs/zepto.min.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/libs/es6-shim.min.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/libs/EventDispatcher.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/libs/promise.min.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/libs/zepto.min.js"></script>
 
-       <script src="./js/compodoc.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/compodoc.js"></script>
 
        <script>var COMPODOC_CURRENT_PAGE_DEPTH = 0;</script>
 
-       <script src="./js/search/search.js"></script>
-       <script src="./js/search/lunr.min.js"></script>
-       <script src="./js/search/search-lunr.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/search/search.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/search/lunr.min.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/search/search-lunr.js"></script>
 
-       <script src="./js/tabs.js"></script>
-       <script src="./js/menu.js"></script>
-       <script src="./js/libs/prism.js"></script>
-       <script src="./js/sourceCode.js"></script>
-       <script src="./js/search/search_index.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/tabs.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/menu.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/libs/prism.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/sourceCode.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/search/search_index.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/version.js"></script>
 
     </body>
 </html>

@@ -1,7 +1,68 @@
-@import "./reset.css";
-@import "./bootstrap.min.css";
-@import "./bootstrap-card.css";
-@import "./prism.css";
-@import "./font-awesome.min.css";
-@import "./compodoc.css";
-@import "./tablesort.css";
+
+@import "./styles/style.css";
+
+
+.next .copyright.logo, .next .navbar.navbar-default.navbar-fixed-top.visible-xs {
+  background: linear-gradient(145deg,#dd0031,#c3002f);
+
+}
+.next .navbar.navbar-default.navbar-fixed-top.visible-xs a.navbar-brand {
+  color: #ffffff;
+}
+em {
+  font-style: italic;
+}
+h1, h2, .menu ul.list li a.active {
+  color: #1ab394;
+}
+a, a:hover, a:focus, a:active, a:visited {
+  color: #1ab394;
+}
+blockquote {
+  border-width: 0;
+  border-left: 5px solid #1ab394;
+  background-color: #dff0d8;
+  margin: 20px 0;
+  padding: 10px 20px;
+  color: #3c763d;
+  font-size: 14px;
+}
+.breadcrumb a {
+  text-decoration: none;
+}
+ol.contents {
+  display: block;
+  list-style-type: decimal;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 20px;
+}
+.issue {
+  text-align: center;
+}
+.nav-tabs>li.right {
+  float: right;
+}
+.nav-tabs li.right a {
+  padding: 0;
+}
+h3:hover::after, .example h6:hover::after {
+  margin: 0 10px;
+  content: "\f0c1";
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h3 a, .example h6 a {
+  color: #333 !important;
+}
+h3 a:hover, .example h6 a {
+  color: #333;
+  text-decoration: none;
+}
+

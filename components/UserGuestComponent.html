@@ -7,8 +7,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	    <link rel="stylesheet" href="../styles/style.css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+	    <link rel="stylesheet" href="/styles/style.css">
     </head>
     <body>
 
@@ -25,11 +25,17 @@
             
                 <ul class="list">
             
-                    <li class="copyright">
+                    <li class="copyright logo">
                         <img  src="http://gomus.de/wp-content/uploads/2016/06/gomus_label_300x300.png" width="100" height="100" alt="" class="img-responsive">
                     </li>
             
                     <li class="divider"></li>
+                    <form>
+                      <div class="form-group">
+                        <select  class="form-control version-select" id="version">
+                        </select>
+                      </div>
+                    </form>
             
             
                     <li class="chapter">
@@ -47,6 +53,31 @@
                         </ul>
                     </li>
             
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-additional-pages"
+                            >
+                            <span class="fa fa-book"></span>
+                            <span>Documentation</span>
+                            <span class="fa fa-angle-up"></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-additional-pages"
+                            >
+                                <li class="link ">
+                                    <a href="../additional-documentation/getting-started.html" >Getting Started</a>
+                                </li>
+                                <li class="link ">
+                                    <a href="../additional-documentation/best-practices.html" >Best Practices</a>
+                                </li>
+                                <li class="link ">
+                                    <a href="../additional-documentation/top-level-components.html" >Top Level Components</a>
+                                </li>
+                                <li class="link ">
+                                    <a href="../additional-documentation/setup-&amp;-deployment.html" >Setup &amp; Deployment</a>
+                                </li>
+                        </ul>
+                    </li>
             
             
                     <li class="chapter">
@@ -60,9 +91,6 @@
                         <ul class="links collapse "
                                 id="xs-components-links"
                             >
-                                <li class="link">
-                                    <a href="../components/AppComponent.html" >AppComponent</a>
-                                </li>
                                 <li class="link">
                                     <a href="../components/CartButtonComponent.html" >CartButtonComponent</a>
                                 </li>
@@ -162,6 +190,13 @@
             
             
                     <li class="divider"></li>
+                    <li class="chapter issue">
+                        <h6>Found something wrong or missing?</h6>
+                        <h6>Tell us!</h6>
+                        <a href="https://github.com/giantmonkey/gomus-components-doc/issues/new?title=Docs: UserGuestComponent&body=Related%20page:%20[UserGuestComponent]()&labels=documentation" role="tab" target="_blank" ><button class="btn btn-success" >Create issue</button></a>
+                    </li>
+            
+                    <li class="divider"></li>
                     <li class="copyright">
                             Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
                                         <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
@@ -180,11 +215,17 @@
                    
                        <ul class="list">
                    
-                           <li class="copyright">
+                           <li class="copyright logo">
                                <img  src="http://gomus.de/wp-content/uploads/2016/06/gomus_label_300x300.png" width="100" height="100" alt="" class="img-responsive">
                            </li>
                    
                            <li class="divider"></li>
+                           <form>
+                             <div class="form-group">
+                               <select  class="form-control version-select" id="version">
+                               </select>
+                             </div>
+                           </form>
                    
                                <div id="book-search-input" role="search">
                                    <input type="text" placeholder="Type to search">
@@ -205,6 +246,31 @@
                                </ul>
                            </li>
                    
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#additional-pages"
+                   >
+                                   <span class="fa fa-book"></span>
+                                   <span>Documentation</span>
+                                   <span class="fa fa-angle-up"></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="additional-pages"
+                   >
+                                       <li class="link ">
+                                           <a href="../additional-documentation/getting-started.html" >Getting Started</a>
+                                       </li>
+                                       <li class="link ">
+                                           <a href="../additional-documentation/best-practices.html" >Best Practices</a>
+                                       </li>
+                                       <li class="link ">
+                                           <a href="../additional-documentation/top-level-components.html" >Top Level Components</a>
+                                       </li>
+                                       <li class="link ">
+                                           <a href="../additional-documentation/setup-&amp;-deployment.html" >Setup &amp; Deployment</a>
+                                       </li>
+                               </ul>
+                           </li>
                    
                    
                            <li class="chapter">
@@ -218,9 +284,6 @@
                                <ul class="links collapse "
                                        id="components-links"
                    >
-                                       <li class="link">
-                                           <a href="../components/AppComponent.html" >AppComponent</a>
-                                       </li>
                                        <li class="link">
                                            <a href="../components/CartButtonComponent.html" >CartButtonComponent</a>
                                        </li>
@@ -320,6 +383,13 @@
                    
                    
                            <li class="divider"></li>
+                           <li class="chapter issue">
+                               <h6>Found something wrong or missing?</h6>
+                               <h6>Tell us!</h6>
+                               <a href="https://github.com/giantmonkey/gomus-components-doc/issues/new?title=Docs: UserGuestComponent&body=Related%20page:%20[UserGuestComponent]()&labels=documentation" role="tab" target="_blank" ><button class="btn btn-success" >Create issue</button></a>
+                           </li>
+                   
+                           <li class="divider"></li>
                            <li class="copyright">
                                    Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
                                                <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
@@ -347,14 +417,21 @@
     </li>
 
 
+    <li class="right">
+        <a href="https://github.com/giantmonkey/gomus-components-doc/issues/new?title=Docs: UserGuestComponent&body=Related%20page:%20[UserGuestComponent](https://giantmonkey.github.io/gomus-components-doc/components/UserGuestComponent)&labels=documentation" role="tab" target="_blank" ><button class="btn btn-success" >Create issue</button></a>
+    </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="info">
+    <div class="tab-pane fade active in" id="info"><h3>Contents</h3>
+<ol class="contents">
+    <li><a href="#metadata">Metadata</a></li>
+    <li><a href="#inputs">Inputs</a></li>
+          <li><a href="#examples">Examples</a></li>
+</ol>
 
-    <p class="comment">
-        <h3>Description</h3>
-    </p>
+
+
     <p class="comment">
         <p>The UserGuestComponent component allows the registration of new guest shop users in
 go~mus.</p>
@@ -400,7 +477,7 @@ and selected using the user url parameter: <code>#/?user=guest</code></p>
 
 
 <section>
-    <h3>Metadata</h3>
+    <h3 id="metadata"><a href="#metadata">Metadata</a></h3>
     <table class="table table-sm table-hover">
         <tbody>
 
@@ -424,7 +501,7 @@ and selected using the user url parameter: <code>#/?user=guest</code></p>
 </section>
 
     <section>
-        <h3 id="inputs">Inputs</h3>
+        <h3 id="inputs"><a href="#inputs">Inputs</a></h3>
             <table class="table table-sm table-bordered">
                 <tbody>
                     <tr>
@@ -440,14 +517,18 @@ and selected using the user url parameter: <code>#/?user=guest</code></p>
             </table>
     </section>
 
-    <p class="comment">
-        <h3>Example</h3>
-    </p>
+
+
     <div class="io-description">
-                <div>
+              <p class="comment">
+                  <h3 id="examples"><a href="#examples">Examples</a></h3>
+              </p>
+                <div id="example-1" class="example">
+                    <h6><a href="#example-1">Example 1</a></h6>
                     <pre class="line-numbers"><code class="language-html">&lt;go-user-guest&gt;&lt;/go-user-guest&gt;</code></pre>
                 </div>
-                <div>
+                <div id="example-2" class="example">
+                    <h6><a href="#example-2">Example 2</a></h6>
                     <pre class="line-numbers"><code class="language-html">&lt;go-user-guest&gt;
       &lt;div go-input-container&gt;
         &lt;label&gt;Anrede&lt;/label&gt;
@@ -529,8 +610,6 @@ and selected using the user url parameter: <code>#/?user=guest</code></p>
 
 
 
-
-
 </div>
 
 
@@ -583,7 +662,7 @@ and selected using the user url parameter: <code>#/?user=guest</code></p>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div>    <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" novalidate>      <ng-container *ngIf="!custom">        <div go-input-container [class]="classes.groups" *ngFor="let item of fields" [ngSwitch]="item.type">          <label [class]="classes.labels">{{item.label}}</label>          <select *ngSwitchCase="\'select\'" [go-form-control]="item.model" [class]="classes.inputs" [required]="item.required"></select>          <input *ngSwitchCase="\'checkbox\'" type="checkbox" [go-form-control]="item.model" [class]="classes.inputs" [required]="item.required">          <input *ngSwitchDefault [go-form-control]="item.model" [type]="item.type" [class]="classes.inputs" [required]="item.required">          <span *ngIf="item.text">{{item.text}}</span>          <div class="go-help-block" *ngIf="item.help">{{item.help}}</div>          <div [go-input-error]="item.model" class="go-error-block"></div>        </div>        <button type="submit">Als Gast fortfahren</button>      </ng-container>      <ng-content></ng-content>    </form></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'body'},{'name': 'CartButtonComponent', 'selector': 'go-cart-button-container'},{'name': 'CartComponent', 'selector': 'go-cart'},{'name': 'CheckoutComponent', 'selector': 'go-checkout'},{'name': 'CheckoutFailureComponent', 'selector': 'go-checkout-failure'},{'name': 'CheckoutPendingComponent', 'selector': 'go-checkout-pending'},{'name': 'CheckoutSuccessComponent', 'selector': 'go-checkout-success'},{'name': 'InputErrorComponent', 'selector': 'go-input-error,[go-input-error]'},{'name': 'OptionComponent', 'selector': 'select[go-form-control]'},{'name': 'ProductBreadcrumbsComponent', 'selector': 'go-product-breadcrumbs,[go-product-breadcrumbs]'},{'name': 'ProductComponent', 'selector': 'go-product,[go-product]'},{'name': 'ProductDateComponent', 'selector': 'go-product-date,[go-product-date]'},{'name': 'ProductDetailComponent', 'selector': 'go-product-detail,[go-product-detail]'},{'name': 'ProductFiltersComponent', 'selector': 'go-product-filters,[go-product-filters]'},{'name': 'ProductInfoComponent', 'selector': 'go-product-info,[go-product-info]'},{'name': 'ProductListComponent', 'selector': 'go-product-list,[go-product-list]'},{'name': 'ProductPricesComponent', 'selector': 'go-product-prices,[go-product-prices]'},{'name': 'ProductTimeComponent', 'selector': 'go-product-time,[go-product-time]'},{'name': 'SelectComponent', 'selector': 'go-select'},{'name': 'TicketsBreadcrumbsComponent', 'selector': 'go-tickets-breadcrumbs,[go-tickets-breadcrumbs]'},{'name': 'TicketsComponent', 'selector': 'go-tickets,[go-tickets]'},{'name': 'TicketsDateComponent', 'selector': 'go-tickets-date,[go-tickets-date]'},{'name': 'TicketsTimeComponent', 'selector': 'go-tickets-time,[go-tickets-time]'},{'name': 'TicketsTypeComponent', 'selector': 'go-tickets-type,[go-tickets-type]'},{'name': 'TotalComponent', 'selector': 'go-total'},{'name': 'UserComponent', 'selector': 'go-user'},{'name': 'UserGuestComponent', 'selector': 'go-user-guest'},{'name': 'UserLoginComponent', 'selector': 'go-user-login'},{'name': 'UserPasswordResetComponent', 'selector': 'go-user-password-reset'},{'name': 'UserRegistrationComponent', 'selector': 'go-user-registration'},{'name': 'UserToolbarComponent', 'selector': 'go-user-toolbar'}];
+    var COMPONENTS = [{'name': 'CartButtonComponent', 'selector': 'go-cart-button-container'},{'name': 'CartComponent', 'selector': 'go-cart'},{'name': 'CheckoutComponent', 'selector': 'go-checkout'},{'name': 'CheckoutFailureComponent', 'selector': 'go-checkout-failure'},{'name': 'CheckoutPendingComponent', 'selector': 'go-checkout-pending'},{'name': 'CheckoutSuccessComponent', 'selector': 'go-checkout-success'},{'name': 'InputErrorComponent', 'selector': 'go-input-error,[go-input-error]'},{'name': 'OptionComponent', 'selector': 'select[go-form-control]'},{'name': 'ProductBreadcrumbsComponent', 'selector': 'go-product-breadcrumbs,[go-product-breadcrumbs]'},{'name': 'ProductComponent', 'selector': 'go-product,[go-product]'},{'name': 'ProductDateComponent', 'selector': 'go-product-date,[go-product-date]'},{'name': 'ProductDetailComponent', 'selector': 'go-product-detail,[go-product-detail]'},{'name': 'ProductFiltersComponent', 'selector': 'go-product-filters,[go-product-filters]'},{'name': 'ProductInfoComponent', 'selector': 'go-product-info,[go-product-info]'},{'name': 'ProductListComponent', 'selector': 'go-product-list,[go-product-list]'},{'name': 'ProductPricesComponent', 'selector': 'go-product-prices,[go-product-prices]'},{'name': 'ProductTimeComponent', 'selector': 'go-product-time,[go-product-time]'},{'name': 'SelectComponent', 'selector': 'go-select'},{'name': 'TicketsBreadcrumbsComponent', 'selector': 'go-tickets-breadcrumbs,[go-tickets-breadcrumbs]'},{'name': 'TicketsComponent', 'selector': 'go-tickets,[go-tickets]'},{'name': 'TicketsDateComponent', 'selector': 'go-tickets-date,[go-tickets-date]'},{'name': 'TicketsTimeComponent', 'selector': 'go-tickets-time,[go-tickets-time]'},{'name': 'TicketsTypeComponent', 'selector': 'go-tickets-type,[go-tickets-type]'},{'name': 'TotalComponent', 'selector': 'go-total'},{'name': 'UserComponent', 'selector': 'go-user'},{'name': 'UserGuestComponent', 'selector': 'go-user-guest'},{'name': 'UserLoginComponent', 'selector': 'go-user-login'},{'name': 'UserPasswordResetComponent', 'selector': 'go-user-password-reset'},{'name': 'UserRegistrationComponent', 'selector': 'go-user-registration'},{'name': 'UserToolbarComponent', 'selector': 'go-user-toolbar'}];
     var DIRECTIVES = [{'name': 'CheckoutFailureActionDirective', 'selector': '[go-checkout-failure-action]'},{'name': 'CheckoutSuccessActionDirective', 'selector': '[go-checkout-success-action]'},{'name': 'GoCheckboxControlValueAccessor', 'selector': 'input[type&#x3D;checkbox][go-form-control]'},{'name': 'GoControlStatus', 'selector': '[go-form-control]'},{'name': 'GoControlStatusGroup', 'selector': '[formGroupName],[formArrayName],[ngModelGroup],[formGroup],[ngForm]'},{'name': 'GoDefaultValueAccessor', 'selector': 'input:not([type&#x3D;&quot;checkbox&quot;])[go-form-control]'},{'name': 'GoFormControlDirective', 'selector': 'input[go-form-control], select[go-form-control]'},{'name': 'GoSelectControlValueAccessor', 'selector': 'select[go-form-control]'},{'name': 'InputContainerDirective', 'selector': 'go-input-container,[go-input-container]'},{'name': 'ProductDateContainerDirective', 'selector': 'go-product-date-container,[go-product-date-container]'},{'name': 'ProductPricesContainerDirective', 'selector': 'go-product-prices-container,[go-product-prices-container]'},{'name': 'ProductPricesDirective', 'selector': '[go-product-prices-item]'},{'name': 'ProductTimeContainerDirective', 'selector': 'go-product-time-container,[go-product-time-container]'},{'name': 'TicketsDateContainerDirective', 'selector': 'go-tickets-date-container,[go-tickets-date-container]'},{'name': 'TicketsTimeContainerDirective', 'selector': 'go-tickets-time-container,[go-tickets-time-container]'},{'name': 'TicketsTypeContainerDirective', 'selector': 'go-tickets-type-container,[go-tickets-type-container]'},{'name': 'TicketsTypeItemDirective', 'selector': '[go-tickets-type-item]'},{'name': 'UserActionDirective', 'selector': '[go-user-action]'},{'name': 'UserContentDirective', 'selector': 'go-user-content,[go-user-content]'},{'name': 'UserToolbarLoginDirective', 'selector': 'go-user-toolbar-login,[go-user-toolbar-login]'},{'name': 'UserToolbarLogoutDirective', 'selector': 'go-user-toolbar-logout,[go-user-toolbar-logout]'},{'name': 'UserToolbarRegisterDirective', 'selector': 'go-user-toolbar-register,[go-user-toolbar-register]'}];
     var ACTUAL_COMPONENT = {'name': 'UserGuestComponent'};
 </script>
@@ -610,26 +689,27 @@ and selected using the user url parameter: <code>#/?user=guest</code></p>
            </div>
        </div>
 
-       <script src="../js/libs/bootstrap-native.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/libs/bootstrap-native.js"></script>
 
-       <script src="../js/libs/es6-shim.min.js"></script>
-       <script src="../js/libs/EventDispatcher.js"></script>
-       <script src="../js/libs/promise.min.js"></script>
-       <script src="../js/libs/zepto.min.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/libs/es6-shim.min.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/libs/EventDispatcher.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/libs/promise.min.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/libs/zepto.min.js"></script>
 
-       <script src="../js/compodoc.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/compodoc.js"></script>
 
        <script>var COMPODOC_CURRENT_PAGE_DEPTH = 1;</script>
 
-       <script src="../js/search/search.js"></script>
-       <script src="../js/search/lunr.min.js"></script>
-       <script src="../js/search/search-lunr.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/search/search.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/search/lunr.min.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/search/search-lunr.js"></script>
 
-       <script src="../js/tabs.js"></script>
-       <script src="../js/menu.js"></script>
-       <script src="../js/libs/prism.js"></script>
-       <script src="../js/sourceCode.js"></script>
-       <script src="../js/search/search_index.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/tabs.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/menu.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/libs/prism.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/sourceCode.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/search/search_index.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/version.js"></script>
 
     </body>
 </html>

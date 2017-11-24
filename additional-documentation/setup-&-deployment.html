@@ -1,0 +1,531 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>go~mus-components Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+	    <link rel="stylesheet" href="/styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">go~mus-components Documentation</a>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="copyright logo">
+                        <img  src="http://gomus.de/wp-content/uploads/2016/06/gomus_label_300x300.png" width="100" height="100" alt="" class="img-responsive">
+                    </li>
+            
+                    <li class="divider"></li>
+                    <form>
+                      <div class="form-group">
+                        <select  class="form-control version-select" id="version">
+                        </select>
+                      </div>
+                    </form>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                  <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                    <a href="/gomus-components-doc/changelog.html"
+                                        >
+                                        <span class="fa fa-file-text-o"></span>CHANGELOG
+                                    </a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-additional-pages"
+                            >
+                            <span class="fa fa-book"></span>
+                            <span>Documentation</span>
+                            <span class="fa fa-angle-up"></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-additional-pages"
+                            >
+                                <li class="link ">
+                                    <a href="../additional-documentation/getting-started.html" >Getting Started</a>
+                                </li>
+                                <li class="link ">
+                                    <a href="../additional-documentation/best-practices.html" >Best Practices</a>
+                                </li>
+                                <li class="link ">
+                                    <a href="../additional-documentation/top-level-components.html" >Top Level Components</a>
+                                </li>
+                                <li class="link ">
+                                    <a href="../additional-documentation/setup-&amp;-deployment.html"  data-type="entity-link" class="active" >Setup &amp; Deployment</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-components-links"
+                            >
+                            <span class="fa fa-cogs"></span>
+                            <span>Components</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-components-links"
+                            >
+                                <li class="link">
+                                    <a href="../components/CartButtonComponent.html" >CartButtonComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/CartComponent.html" >CartComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/CheckoutComponent.html" >CheckoutComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/CheckoutFailureComponent.html" >CheckoutFailureComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/CheckoutPendingComponent.html" >CheckoutPendingComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/CheckoutSuccessComponent.html" >CheckoutSuccessComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/InputErrorComponent.html" >InputErrorComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/OptionComponent.html" >OptionComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/ProductBreadcrumbsComponent.html" >ProductBreadcrumbsComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/ProductComponent.html" >ProductComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/ProductDateComponent.html" >ProductDateComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/ProductDetailComponent.html" >ProductDetailComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/ProductFiltersComponent.html" >ProductFiltersComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/ProductInfoComponent.html" >ProductInfoComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/ProductListComponent.html" >ProductListComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/ProductPricesComponent.html" >ProductPricesComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/ProductTimeComponent.html" >ProductTimeComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/SelectComponent.html" >SelectComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/TicketsBreadcrumbsComponent.html" >TicketsBreadcrumbsComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/TicketsComponent.html" >TicketsComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/TicketsDateComponent.html" >TicketsDateComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/TicketsTimeComponent.html" >TicketsTimeComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/TicketsTypeComponent.html" >TicketsTypeComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/TotalComponent.html" >TotalComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UserComponent.html" >UserComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UserGuestComponent.html" >UserGuestComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UserLoginComponent.html" >UserLoginComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UserPasswordResetComponent.html" >UserPasswordResetComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UserRegistrationComponent.html" >UserRegistrationComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UserToolbarComponent.html" >UserToolbarComponent</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+            
+            
+            
+                    <li class="divider"></li>
+                    <li class="chapter issue">
+                        <h6>Found something wrong or missing?</h6>
+                        <h6>Tell us!</h6>
+                        <a href="https://github.com/giantmonkey/gomus-components-doc/issues/new?title=Docs: Setup &amp; Deployment&body=Related%20page:%20[Setup &amp; Deployment]()&labels=documentation" role="tab" target="_blank" ><button class="btn btn-success" >Create issue</button></a>
+                    </li>
+            
+                    <li class="divider"></li>
+                    <li class="copyright">
+                            Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
+                                        <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
+                            </a>
+                    </li>
+            
+                </ul>
+            
+            </nav>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="copyright logo">
+                               <img  src="http://gomus.de/wp-content/uploads/2016/06/gomus_label_300x300.png" width="100" height="100" alt="" class="img-responsive">
+                           </li>
+                   
+                           <li class="divider"></li>
+                           <form>
+                             <div class="form-group">
+                               <select  class="form-control version-select" id="version">
+                               </select>
+                             </div>
+                           </form>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                         <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="/gomus-components-doc/changelog.html"
+                                               >
+                                               <span class="fa fa-file-text-o"></span>CHANGELOG
+                                           </a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#additional-pages"
+                   >
+                                   <span class="fa fa-book"></span>
+                                   <span>Documentation</span>
+                                   <span class="fa fa-angle-up"></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="additional-pages"
+                   >
+                                       <li class="link ">
+                                           <a href="../additional-documentation/getting-started.html" >Getting Started</a>
+                                       </li>
+                                       <li class="link ">
+                                           <a href="../additional-documentation/best-practices.html" >Best Practices</a>
+                                       </li>
+                                       <li class="link ">
+                                           <a href="../additional-documentation/top-level-components.html" >Top Level Components</a>
+                                       </li>
+                                       <li class="link ">
+                                           <a href="../additional-documentation/setup-&amp;-deployment.html"  data-type="entity-link" class="active" >Setup &amp; Deployment</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#components-links"
+                   >
+                                   <span class="fa fa-cogs"></span>
+                                   <span>Components</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="components-links"
+                   >
+                                       <li class="link">
+                                           <a href="../components/CartButtonComponent.html" >CartButtonComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/CartComponent.html" >CartComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/CheckoutComponent.html" >CheckoutComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/CheckoutFailureComponent.html" >CheckoutFailureComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/CheckoutPendingComponent.html" >CheckoutPendingComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/CheckoutSuccessComponent.html" >CheckoutSuccessComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/InputErrorComponent.html" >InputErrorComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/OptionComponent.html" >OptionComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ProductBreadcrumbsComponent.html" >ProductBreadcrumbsComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ProductComponent.html" >ProductComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ProductDateComponent.html" >ProductDateComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ProductDetailComponent.html" >ProductDetailComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ProductFiltersComponent.html" >ProductFiltersComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ProductInfoComponent.html" >ProductInfoComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ProductListComponent.html" >ProductListComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ProductPricesComponent.html" >ProductPricesComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ProductTimeComponent.html" >ProductTimeComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/SelectComponent.html" >SelectComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/TicketsBreadcrumbsComponent.html" >TicketsBreadcrumbsComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/TicketsComponent.html" >TicketsComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/TicketsDateComponent.html" >TicketsDateComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/TicketsTimeComponent.html" >TicketsTimeComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/TicketsTypeComponent.html" >TicketsTypeComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/TotalComponent.html" >TotalComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UserComponent.html" >UserComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UserGuestComponent.html" >UserGuestComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UserLoginComponent.html" >UserLoginComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UserPasswordResetComponent.html" >UserPasswordResetComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UserRegistrationComponent.html" >UserRegistrationComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UserToolbarComponent.html" >UserToolbarComponent</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                   
+                   
+                   
+                           <li class="divider"></li>
+                           <li class="chapter issue">
+                               <h6>Found something wrong or missing?</h6>
+                               <h6>Tell us!</h6>
+                               <a href="https://github.com/giantmonkey/gomus-components-doc/issues/new?title=Docs: Setup &amp; Deployment&body=Related%20page:%20[Setup &amp; Deployment]()&labels=documentation" role="tab" target="_blank" ><button class="btn btn-success" >Create issue</button></a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                           <li class="copyright">
+                                   Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
+                                               <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
+                                   </a>
+                           </li>
+                   
+                       </ul>
+                   
+                   </nav>
+               </div>
+               <div class="content additional-page">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1 id="setup-and-deployment">Setup and Deployment</h1>
+<p>The setup for you test environments and you production environments should vary to enable the best experience for you and your development environment and to your end users.</p>
+<p>You should always load the components script from our CDN in an asynchronous manner. For example:</p>
+<pre class="line-numbers"><code class="language-html">&lt;script src=&quot;https://cdn.gomus.de/components/latest/components.min.js&quot; async&gt;&lt;/script&gt;</code></pre><h2 id="setup-for-local-and-staging-environments">Setup for local and staging environments</h2>
+<p>It is important that you set the domain for the go~mus instance to a staging environment. Clients normally have two environments, a staging and production environment, and for development the staging environment should always be used.</p>
+<p>Staging environments can be identified by the <code>-staging</code> part of the domain. For example if you have a go~mus instance called <code>my</code>, then the production url would be <code>my.gomus.de</code> and the staging instance <code>my-staging.gomus.de</code>.</p>
+<p>It is recommended that you develop against the latest version of the components using either <code>/latest/components.min.js</code> or <code>/v.0/components.min.js</code>. This means you keep up to date with the latest changes and bug fixes.</p>
+<p>It is also recommended that you set the debug property in the global configuration to true. This enables the outputting of hints, warnings and errors in the browser console.</p>
+<h2 id="setup-for-production-environments">Setup for production environments</h2>
+<p>Before going live you should check that you global configuration is correct.</p>
+<ul>
+<li>The <code>domain</code> needs to be pointed to the production instance of go~mus.</li>
+<li>The <code>shop_domain</code> needs to be set to your production website URL so that the redirects work properly.</li>
+<li>The correct payment mode ids need to entered</li>
+<li>Debug mode should not be disabled by setting it to false, or removing it from the config completely.</li>
+<li>It is recommended to use the pin the components to a specific version, or minor version if you want to receive patch updates. For example <code>/v.1.2.3/components.min.js</code> or <code>/v.1.2/components.min.js</code>.</li>
+</ul>
+<h2 id="browser-support">Browser support</h2>
+<p>go~mus components supports the most recent two versions of all major browsers: Chrome (including Android), Firefox, Safari (including iOS), and IE11 / Edge.</p>
+<p>This includes the following specific versions:</p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>Chrome</th>
+<th>Firefox</th>
+<th>Edge</th>
+<th>IE</th>
+<th>Safari</th>
+<th>iOS</th>
+<th>Android</th>
+<th>IE Mobile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>latest</td>
+<td>latest</td>
+<td>14</td>
+<td>11</td>
+<td>10</td>
+<td>10</td>
+<td>Nougat (7.0)/Marshmallow (6.0)</td>
+<td>11</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>13</td>
+<td>10</td>
+<td>9</td>
+<td>9</td>
+<td>Lollipop (5.0, 5.1)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>9</td>
+<td>8</td>
+<td>8</td>
+<td>KitKat (4.4)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>7</td>
+<td>7</td>
+<td>Jelly Bean (4.1, 4.2, 4.3)</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+           </div>
+       </div>
+
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/libs/bootstrap-native.js"></script>
+
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/libs/es6-shim.min.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/libs/EventDispatcher.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/libs/promise.min.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/libs/zepto.min.js"></script>
+
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/compodoc.js"></script>
+
+       <script>var COMPODOC_CURRENT_PAGE_DEPTH = 1;</script>
+
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/search/search.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/search/lunr.min.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/search/search-lunr.js"></script>
+
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/tabs.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/menu.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/libs/prism.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/sourceCode.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/search/search_index.js"></script>
+       <script src="https://giantmonkey.github.io/gomus-components-doc/js/version.js"></script>
+
+    </body>
+</html>
