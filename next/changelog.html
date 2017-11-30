@@ -406,6 +406,58 @@
 <h1 id="changelog">Changelog</h1>
 <p>All notable changes to this project will be documented in this file.</p>
 <p>The format is based on <a href="http://keepachangelog.com/en/1.0.0/">Keep a Changelog</a> and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+<h2 id="-unreleased-2017-11-24-https-giantmonkey-github-io-gomus-components-doc-changelog-html-head-2017-11-24-"><a href="https://giantmonkey.github.io/gomus-components-doc/changelog.html#-HEAD-2017-11-24">[UNRELEASED] - 2017-11-24</a></h2>
+<h2 id="-v-0-1-13-2017-11-24-https-giantmonkey-github-io-gomus-components-doc-changelog-html-v-0-1-13-2017-11-24-"><a href="https://giantmonkey.github.io/gomus-components-doc/changelog.html#-v-0-1-13-2017-11-24">[v.0.1.13] - 2017-11-24</a></h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>added a <a href="https://giantmonkey.github.io/gomus-components-doc/components/UserPasswordResetComponent.html">UserPasswordResetComponent</a> as an inner component of the <a href="https://giantmonkey.github.io/gomus-components-doc/components/UserLoginComponent.html">UserLoginComponent</a></li>
+<li>add ability to customise the <a href="https://giantmonkey.github.io/gomus-components-doc/components/UserToolbarComponent.html">UserToolbarComponent</a> template.</li>
+<li>add the ability to add custom classes to the contents of the <a href="https://giantmonkey.github.io/gomus-components-doc/components/UserToolbarComponent.html">UserToolbarComponent</a></li>
+<li>add ability to show the start time/date for cart items in the <a href="https://giantmonkey.github.io/gomus-components-doc/components/CartComponent.html">CartComponent</a>. The format can be defined in the <a href="https://giantmonkey.github.io/gomus-components-doc/classes/CartOptions.html">CartOptions</a></li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>allowed the specifying of individual <a href="https://giantmonkey.github.io/gomus-components-doc/classes/UserAction.html">redirect URLs</a> for the different user components</li>
+<li>update the <a href="https://giantmonkey.github.io/gomus-components-doc/classes/OptionsDate.html">options</a> for ProductDate and TicketDate components</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>fix selection of <a href="https://giantmonkey.github.io/gomus-components-doc/components/UserLoginComponent.html">UserLoginComponent</a> with user parameter: <code>user=login</code>.</li>
+</ul>
+<h2 id="-v-0-1-12-2017-10-20-https-giantmonkey-github-io-gomus-components-doc-changelog-html-v-0-1-12-2017-10-20-"><a href="https://giantmonkey.github.io/gomus-components-doc/changelog.html#-v-0-1-12-2017-10-20">[v.0.1.12] - 2017-10-20</a></h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>add the ability to customise the <a href="https://giantmonkey.github.io/gomus-components-doc/components/UserComponent.html">UserCompmonent</a> template</li>
+<li>add the ability to customise the <a href="https://giantmonkey.github.io/gomus-components-doc/components/UserLoginComponent.html">UserLoginComponent</a> within the <a href="https://giantmonkey.github.io/gomus-components-doc/components/UserComponent.html">UserComponent</a></li>
+<li>add the ability to select the language and age group for tours using the <a href="https://giantmonkey.github.io/gomus-components-doc/components/ProductFiltersComponent.html">ProductFiltersComponent</a></li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>updated the <a href="https://giantmonkey.github.io/gomus-components-doc/components/ProductBreadcrumbsComponent.html">ProductBreadcrumbsComponent</a> to include the language and age group breadcrumbs</li>
+<li>change the <a href="https://giantmonkey.github.io/gomus-components-doc/components/ProductComponent.html">ProductComponent</a> to listen for change events (<code>goComponentChanges</code>) on the element itself, not on the global document level. This allows the support of updating multiple ProductComponents on one page.</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>fix calculation of group tour prices in the CartComponent</li>
+</ul>
+<h2 id="-v-0-1-11-2017-10-17-https-giantmonkey-github-io-gomus-components-doc-changelog-html-v-0-1-11-2017-10-17-"><a href="https://giantmonkey.github.io/gomus-components-doc/changelog.html#-v-0-1-11-2017-10-17">[v.0.1.11] - 2017-10-17</a></h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>add the dynamic updating of the <a href="https://giantmonkey.github.io/gomus-components-doc/components/ProductComponent.html">ProductComponent</a> using a JS CustomEvent</li>
+<li>allow the use of select fields as the custom template for the <a href="https://giantmonkey.github.io/gomus-components-doc/components/ProductTimeComponent.html">ProductTimeComponent</a></li>
+<li>add validation to CartActionDirective: only if there are items present in the cart, will the action be carried out</li>
+<li>added options to disable days for the <a href="https://giantmonkey.github.io/gomus-components-doc/components/ProductDateComponent.html">ProductDateComponent</a>. Dates can now be disabled when they are booked-out and/or empty: <a href="https://giantmonkey.github.io/gomus-components-doc/interfaces/IsDateDisabled.html">IsDateDisabled</a></li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>Change and unify wording of <code>options</code> input types in documentation</li>
+<li>changed the user documentation to warn about notifying PMs of the url to be used as the redirect after a successful user registration</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>fix the setting of the locale in the global options (<code>_gomusOptions</code>)</li>
+<li>redirect to the <code>user_url</code> defined in the <a href="https://giantmonkey.github.io/gomus-components-doc/classes/CheckoutOptions.html">options object</a> if user is not authenticated in the checkout process</li>
+</ul>
 <h2 id="-v-0-1-10-2017-10-05-https-giantmonkey-github-io-gomus-components-doc-changelog-html-v-0-1-10-2017-10-05-"><a href="https://giantmonkey.github.io/gomus-components-doc/changelog.html#-v-0-1-10-2017-10-05">[v.0.1.10] - 2017-10-05</a></h2>
 <h3 id="added">Added</h3>
 <ul>
