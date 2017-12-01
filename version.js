@@ -5,19 +5,19 @@ function setUpVersions() {
     var options = [
       {
         "text"  : "next (v1 - beta)",
-        "value" : "/next/"
+        "value" : "/gomus-components-doc/next/"
       },
       {
         "text"  : "stable",
-        "value" : "/"
+        "value" : "/gomus-components-doc/"
       }
     ];
-    var version = location.pathname.split('/')[1]
+    var version = location.pathname.split('/')[2]
 
     var selectedIndex = 1;
     options.forEach( (option, index) => {
       optionList.add( new Option(option.text, option.value ));
-      option.value === '/' + version + '/' ? selectedIndex = index : null;
+      option.value === '/gomus-components-doc/' + version + '/' ? selectedIndex = index : null;
     });
     select.selectedIndex = selectedIndex;
     if (select.selectedIndex == 0) {
