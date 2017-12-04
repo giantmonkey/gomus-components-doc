@@ -471,11 +471,11 @@ and selected using the user url parameter: <code>#/?user=register</code></p>
 <li><code>email_confirmation*</code></li>
 <li><code>password*</code></li>
 <li><code>password_confirmation*</code></li>
-<li><code>adressat</code></li>
-<li><code>street*</code></li>
-<li><code>city*</code></li>
-<li><code>addr_zip*</code></li>
-<li><code>country</code></li>
+<li><code>addr_addressat</code></li>
+<li><code>addr_street</code></li>
+<li><code>addr_city</code></li>
+<li><code>addr_zip</code></li>
+<li><code>addr_country_id</code></li>
 <li><code>terms*</code></li>
 <li><code>wants_newsletter</code></li>
 </ul>
@@ -574,13 +574,13 @@ and selected using the user url parameter: <code>#/?user=register</code></p>
       &lt;/div&gt;
       &lt;div go-input-container&gt;
         &lt;label&gt;Adressat&lt;/label&gt;
-        &lt;input type=&quot;text&quot; go-form-control=&quot;adressat&quot;&gt;
-        &lt;div go-input-error=&quot;adressat&quot;&gt;&lt;/div&gt;
+        &lt;input type=&quot;text&quot; go-form-control=&quot;addr_addressat&quot;&gt;
+        &lt;div go-input-error=&quot;addr_adressat&quot;&gt;&lt;/div&gt;
       &lt;/div&gt;
       &lt;div go-input-container&gt;
         &lt;label&gt;Straße&lt;/label&gt;
-        &lt;input type=&quot;text&quot; go-form-control=&quot;street&quot; required&gt;
-        &lt;div go-input-error=&quot;street&quot;&gt;&lt;/div&gt;
+        &lt;input type=&quot;text&quot; go-form-control=&quot;addr_street&quot; required&gt;
+        &lt;div go-input-error=&quot;addr_street&quot;&gt;&lt;/div&gt;
       &lt;/div&gt;
       &lt;div go-input-container&gt;
         &lt;label&gt;PLZ&lt;/label&gt;
@@ -589,13 +589,13 @@ and selected using the user url parameter: <code>#/?user=register</code></p>
       &lt;/div&gt;
       &lt;div go-input-container&gt;
         &lt;label&gt;Stadt&lt;/label&gt;
-        &lt;input type=&quot;text&quot; go-form-control=&quot;city&quot; required&gt;
-        &lt;div go-input-error=&quot;city&quot;&gt;&lt;/div&gt;
+        &lt;input type=&quot;text&quot; go-form-control=&quot;addr_city&quot; required&gt;
+        &lt;div go-input-error=&quot;addr_city&quot;&gt;&lt;/div&gt;
       &lt;/div&gt;
       &lt;div go-input-container&gt;
         &lt;label&gt;Land&lt;/label&gt;
-        &lt;input type=&quot;text&quot; go-form-control=&quot;country&quot;&gt;
-        &lt;div go-input-error=&quot;country&quot;&gt;&lt;/div&gt;
+        &lt;select go-form-control=&quot;addr_country_id&quot;&gt;&lt;/select&gt;
+        &lt;div go-input-error=&quot;addr_country_id&quot;&gt;&lt;/div&gt;
       &lt;/div&gt;
       &lt;div go-input-container&gt;
         &lt;label&gt;AGB&lt;/label&gt;
