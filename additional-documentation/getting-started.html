@@ -529,9 +529,9 @@
 <p>We can now customise the component by providing an options JSON Object.</p>
 <p>Let&#39;s say we want to only display day tickets, instead of all available tickets. In this case we would provide an options object with the new <code>types</code> property.</p>
 <pre class="line-numbers"><code class="language-json">{
-  &quot;types&quot;: [&quot;day&quot;]
+  &quot;types&quot;: [&quot;normal&quot;]
 }</code></pre><p>We would then pass the object into the tickets component like this:</p>
-<pre class="line-numbers"><code class="language-html">&lt;go-tickets options=&#39;{&quot;types&quot;: [&quot;day&quot;]}&#39;&gt;&lt;/go-tickets&gt;</code></pre><p>Now when we reload our page, only day tickets will be displayed by the component.</p>
+<pre class="line-numbers"><code class="language-html">&lt;go-tickets options=&#39;{&quot;types&quot;: [&quot;normal&quot;]}&#39;&gt;&lt;/go-tickets&gt;</code></pre><p>Now when we reload our page, only day tickets will be displayed by the component.</p>
 <h2 id="step-5-define-the-global-configuration">Step 5. Define the global configuration</h2>
 <p>Up until now we have been using the default configuration for the components. To customise further we can define a global variable called <code>_gomusOptions</code> and pass in our own configuration.</p>
 <p>We use this to define global options such as what go~mus intance we want the components to communicate with.</p>
