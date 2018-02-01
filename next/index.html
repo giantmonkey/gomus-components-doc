@@ -47,9 +47,9 @@
                                   <a href="./index.html"  class="active" ><span class="fa fa-file-text-o"></span>README</a>
                                 </li>
                                 <li class="link">
-                                    <a href="https://giantmonkey.github.io/gomus-components-doc/next/changelog.html"
+                                    <a href="https://giantmonkey.github.io/gomus-components-doc/next/license.html"
                                         >
-                                        <span class="fa fa-file-text-o"></span>CHANGELOG
+                                        <span class="fa fa-file-text-o"></span>LICENSE
                                     </a>
                                 </li>
                         </ul>
@@ -82,6 +82,25 @@
                     </li>
             
             
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-components-links"
+                            >
+                            <span class="fa fa-cogs"></span>
+                            <span>Components</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-components-links"
+                            >
+                                <li class="link">
+                                    <a href="./components/AppComponent.html" >AppComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./components/AppComponent.html" >AppComponent</a>
+                                </li>
+                        </ul>
+                    </li>
             
             
             
@@ -139,9 +158,9 @@
                                          <a href="./index.html"  class="active" ><span class="fa fa-file-text-o"></span>README</a>
                                        </li>
                                        <li class="link">
-                                           <a href="https://giantmonkey.github.io/gomus-components-doc/next/changelog.html"
+                                           <a href="https://giantmonkey.github.io/gomus-components-doc/next/license.html"
                                                >
-                                               <span class="fa fa-file-text-o"></span>CHANGELOG
+                                               <span class="fa fa-file-text-o"></span>LICENSE
                                            </a>
                                        </li>
                                </ul>
@@ -174,6 +193,25 @@
                            </li>
                    
                    
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#components-links"
+                   >
+                                   <span class="fa fa-cogs"></span>
+                                   <span>Components</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="components-links"
+                   >
+                                       <li class="link">
+                                           <a href="./components/AppComponent.html" >AppComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./components/AppComponent.html" >AppComponent</a>
+                                       </li>
+                               </ul>
+                           </li>
                    
                    
                    
@@ -201,33 +239,7 @@
                <div class="content getting-started">
                    <div class="content-data">
 
-<h1 id="go-mus-components">go~mus components</h1>
-<!-- [![build status](https://giantmonkey.githost.io/gomus/components/badges/master/build.svg)](https://giantmonkey.githost.io/gomus/components/commits/master) -->
-<!-- [![coverage report](https://giantmonkey.githost.io/gomus/components/badges/master/coverage.svg)](https://giantmonkey.githost.io/gomus/components/commits/master) -->
-<blockquote>
-<p>This is the next version of the go~mus components and is currently under rapid development. To get used to the concepts and try things out, head over to the <a href="https://giantmonkey.github.io/gomus-components-doc">stable version</a>.</p>
-</blockquote>
-<h2 id="what-is-go-mus-components-">What is go~mus components?</h2>
-<p><a href="https://gomus.de">go~mus</a> is a web-based software for visitor management in museums and cultural institutions. It provides the means of selling tickets or products online through different add-ons such as through an online shop or using the API.</p>
-<p>These cover both extremes of the spectrum:</p>
-<ul>
-<li>The <a href="https://gomus.de/en/shop-en/">online shop</a> allows you to hit the ground running and start selling as soon as possible, but has often the disadvantage of double content management and navigating your users away from your website.</li>
-<li>The <a href="https://gomus.de/en/api-en/">API</a> allows you to build a fully integrated application to whatever system you are currently using, but has the disadvantage of taking more time and resources to set up.</li>
-</ul>
-<p>go~mus components is a project that aims to meet you in the middle. It abstracts away the complicated logic that needs to happen in order to sell tickets and products from go~mus, and provides you a simple HTML API to use instead while still allowing a lot of customisation.</p>
-<p>Simply put, it allows you to embed small widget-like components into your existing website to enable the selling of tickets, events and tours from <a href="https://gomus.de">go~mus</a>.</p>
-<h2 id="assumptions">Assumptions</h2>
-<p>This documentation assumes that you are already familiar with <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML</a> and have a basic understanding of <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript">JavaScript</a> and <a href="https://www.json.org/">JSON</a>. The code samples are written in HTML5, JSON and the latest JavaScript.</p>
-<h2 id="compatibility">Compatibility</h2>
-<p>This project is compatible with version 4 of the go~mus API. The documentation for which can be found online under: <a href="https://giantmonkey.github.io/gomus-api-doc">https://giantmonkey.github.io/gomus-api-doc</a></p>
-<p><em>For browser compatibility please see the <a href="./additional-documentation/setup-&amp;-deployment.html#browser-support">browser support</a> section under <a href="./additional-documentation/setup-&amp;-deployment.html">setup and deployment</a>.</em></p>
-<h2 id="project-status">Project status</h2>
-<p>go~mus components is currently in beta and under active development. During beta, new features will be added regularly and APIs will evolve based on user feedback.</p>
-<p><em>IMPORTANT: Custom tables for dynamic component parts are not possible due to strict browser rules. Flex or other CSS will need to be used instead.</em></p>
-<!-- Stable and experimental components and their APIs are marked using the `@stable` and `@experimental` flags. -->
-<h2 id="feedback">Feedback</h2>
-<p>You can help us!</p>
-<p>You can <a href="https://github.com/giantmonkey/gomus-components-doc/issues/new">create issues</a>, albeit documentation issues or code issues, on the <a href="https://github.com/giantmonkey/gomus-components-doc">Components Github repository</a>.</p>
+<h1 id="gomus-components">gomus-components</h1>
 
 
 

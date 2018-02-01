@@ -67,7 +67,7 @@
                                 id="xs-additional-pages"
                             >
                                 <li class="link ">
-                                    <a href="../additional-documentation/getting-started.html"  data-type="entity-link" class="active" >Getting Started</a>
+                                    <a href="../additional-documentation/getting-started.html" >Getting Started</a>
                                 </li>
                                 <li class="link ">
                                     <a href="../additional-documentation/best-practices.html" >Best Practices</a>
@@ -111,7 +111,7 @@
                     <li class="chapter issue">
                         <h6>Found something wrong or missing?</h6>
                         <h6>Tell us!</h6>
-                        <a href="https://github.com/giantmonkey/gomus-components-doc/issues/new?title=Docs: Getting Started&body=Related%20page:%20[Getting Started]()&labels=documentation" role="tab" target="_blank" ><button class="btn btn-success" >Create issue</button></a>
+                        <a href="https://github.com/giantmonkey/gomus-components-doc/issues/new?title=Docs: RegisterData&body=Related%20page:%20[RegisterData]()&labels=documentation" role="tab" target="_blank" ><button class="btn btn-success" >Create issue</button></a>
                     </li>
             
                     <li class="divider"></li>
@@ -178,7 +178,7 @@
                                        id="additional-pages"
                    >
                                        <li class="link ">
-                                           <a href="../additional-documentation/getting-started.html"  data-type="entity-link" class="active" >Getting Started</a>
+                                           <a href="../additional-documentation/getting-started.html" >Getting Started</a>
                                        </li>
                                        <li class="link ">
                                            <a href="../additional-documentation/best-practices.html" >Best Practices</a>
@@ -222,7 +222,7 @@
                            <li class="chapter issue">
                                <h6>Found something wrong or missing?</h6>
                                <h6>Tell us!</h6>
-                               <a href="https://github.com/giantmonkey/gomus-components-doc/issues/new?title=Docs: Getting Started&body=Related%20page:%20[Getting Started]()&labels=documentation" role="tab" target="_blank" ><button class="btn btn-success" >Create issue</button></a>
+                               <a href="https://github.com/giantmonkey/gomus-components-doc/issues/new?title=Docs: RegisterData&body=Related%20page:%20[RegisterData]()&labels=documentation" role="tab" target="_blank" ><button class="btn btn-success" >Create issue</button></a>
                            </li>
                    
                            <li class="divider"></li>
@@ -236,7 +236,7 @@
                    
                    </nav>
                </div>
-               <div class="content additional-page">
+               <div class="content interface">
                    <div class="content-data">
 
 
@@ -247,135 +247,296 @@
 
 
 
+<ol class="breadcrumb">
+  <li>Config</li>
+  <li>RegisterData</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
+    </li>
+
+
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
 
 
 
 
-<h1 id="getting-started">Getting Started</h1>
-<p>Getting started is easy and simple. All that is needed is to load the go~mus component JavaScript file and add some components to your HTML page.</p>
-<p>By the end of this guide you&#39;ll have a basic understanding of how to develop with the components and how to integrate them into your website.</p>
-<h2 id="step-1-create-a-basic-html-page">Step 1. Create a basic HTML page</h2>
-<p>Create a HTML page with the following basic structure:</p>
-<pre class="line-numbers"><code class="language-html">&lt;!doctype html&gt;
 
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
+            <section>
+                <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <b>email</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>email:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</bcode>
+                                    </td>
+                                </tr>
 
-    &lt;title&gt;My first go~mus components website&lt;/title&gt;
-    &lt;meta name=&quot;description&quot; content=&quot;My first go~mus components website&quot;&gt;
-    &lt;meta name=&quot;author&quot; content=&quot;go~mus&quot;&gt;
 
-    &lt;!--[if lt IE 9]&gt;
-      &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js&quot;&gt;&lt;/script&gt;
-    &lt;![endif]--&gt;
-  &lt;/head&gt;
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
-  &lt;body&gt;
-    &lt;h1&gt;My first go~mus components website&lt;/h1&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre><h2 id="step-2-load-the-components-script">Step 2. Load the components script</h2>
-<p>Next we need to load the components script into the page. To do this will simply need to define a script tag pointing to the location of the components script on the go~mus CDN. The script tag can look like this:</p>
-<pre class="line-numbers"><code class="language-html">&lt;script src=&quot;https://cdn.gomus.de/components/latest/components.min.js&quot; async&gt;&lt;/script&gt;</code></pre><p>We can insert this at the end of the <code>head</code> section so that our HTML page now looks like the following:</p>
-<pre class="line-numbers"><code class="language-html">&lt;!doctype html&gt;
+                                        </td>
+                                    </tr>
 
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
 
-    &lt;title&gt;My first go~mus components website&lt;/title&gt;
-    &lt;meta name=&quot;description&quot; content=&quot;My first go~mus components website&quot;&gt;
-    &lt;meta name=&quot;author&quot; content=&quot;go~mus&quot;&gt;
 
-    &lt;!--[if lt IE 9]&gt;
-      &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js&quot;&gt;&lt;/script&gt;
-    &lt;![endif]--&gt;
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">lib/auth/src/auth.model.ts:9</a></div>
+                                        </td>
+                                    </tr>
 
-    &lt;script src=&quot;https://cdn.gomus.de/components/latest/components.min.js&quot; async&gt;&lt;/script&gt;
-  &lt;/head&gt;
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <b>name</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>name:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</bcode>
+                                    </td>
+                                </tr>
 
-  &lt;body&gt;
-    &lt;h1&gt;My first go~mus components website&lt;/h1&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre><p>Now when we load the page, the component script loaded in an asynchronous manner.</p>
-<h2 id="step-3-add-a-component">Step 3. Add a component</h2>
-<p>We are now ready to add our first component. For this example we will add the <a href="../components/TicketsComponent.html">tickets component</a>.</p>
-<p>To do this we need to add the HTML snippet for the tickets component to the body of our HTML page.</p>
-<p>The snippet looks like this:</p>
-<pre class="line-numbers"><code class="language-html">&lt;go-tickets&gt;&lt;/go-tickets&gt;</code></pre><p>And when added to our HTML page it should look like the following:</p>
-<pre class="line-numbers"><code class="language-html">&lt;!doctype html&gt;
 
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
-    &lt;title&gt;My first go~mus components website&lt;/title&gt;
-    &lt;meta name=&quot;description&quot; content=&quot;My first go~mus components website&quot;&gt;
-    &lt;meta name=&quot;author&quot; content=&quot;go~mus&quot;&gt;
+                                        </td>
+                                    </tr>
 
-    &lt;!--[if lt IE 9]&gt;
-      &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js&quot;&gt;&lt;/script&gt;
-    &lt;![endif]--&gt;
 
-    &lt;script src=&quot;https://cdn.gomus.de/components/latest/components.min.js&quot; async&gt;&lt;/script&gt;
-  &lt;/head&gt;
 
-  &lt;body&gt;
-    &lt;h1&gt;My first go~mus components website&lt;/h1&gt;
-    &lt;h2&gt;My tickets component&lt;/h2&gt;
-    &lt;go-tickets&gt;&lt;/go-tickets&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre><p>This time when we load the page, the component script loads and sets up the tickets component using the default settings and template.</p>
-<p>Hooray, we have our first component! We are now able to select a desired ticket and add it to the cart.</p>
-<h2 id="step-4-customise-the-component">Step 4. Customise the component</h2>
-<p>We can now customise the component by providing an options JSON Object.</p>
-<p>Let&#39;s say we want to only display day tickets, instead of all available tickets. In this case we would provide an options object with the new <code>types</code> property.</p>
-<pre class="line-numbers"><code class="language-json">{
-  &quot;types&quot;: [&quot;day&quot;]
-}</code></pre><p>We would then pass the object into the tickets component like this:</p>
-<pre class="line-numbers"><code class="language-html">&lt;go-tickets options=&#39;{&quot;types&quot;: [&quot;day&quot;]}&#39;&gt;&lt;/go-tickets&gt;</code></pre><p>Now when we reload our page, only day tickets will be displayed by the component.</p>
-<h2 id="step-5-define-the-global-configuration">Step 5. Define the global configuration</h2>
-<p>Up until now we have been using the default configuration for the components. To customise further we can define a global variable called <code>_gomusOptions</code> and pass in our own configuration.</p>
-<p>We use this to define global options such as what go~mus intance we want the components to communicate with.</p>
-<p>The default configuration that we have been using communicates to our demo go~mus instance. To change the go~mus instance to communicate with another instance we would define the following:</p>
-<pre class="line-numbers"><code class="language-js">var _gomusOptions = {
-  domain: &quot;my.gomus.de&quot;
-}</code></pre><p>We can add this to our HTML page by defining it in another script tag before we load the components file.</p>
-<pre class="line-numbers"><code class="language-html">&lt;!doctype html&gt;
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">lib/auth/src/auth.model.ts:12</a></div>
+                                        </td>
+                                    </tr>
 
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <b>password</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>password:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</bcode>
+                                    </td>
+                                </tr>
 
-    &lt;title&gt;My first go~mus components website&lt;/title&gt;
-    &lt;meta name=&quot;description&quot; content=&quot;My first go~mus components website&quot;&gt;
-    &lt;meta name=&quot;author&quot; content=&quot;go~mus&quot;&gt;
 
-    &lt;!--[if lt IE 9]&gt;
-      &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js&quot;&gt;&lt;/script&gt;
-    &lt;![endif]--&gt;
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
-    &lt;script type=&quot;text/javascript&quot;&gt;
-      var _gomusOptions = {
-        domain: &quot;my.gomus.de&quot;
-      };
-    &lt;/script&gt;
-    &lt;script src=&quot;https://cdn.gomus.de/components/latest/components.min.js&quot; async&gt;&lt;/script&gt;
-  &lt;/head&gt;
+                                        </td>
+                                    </tr>
 
-  &lt;body&gt;
-    &lt;h1&gt;My first go~mus components website&lt;/h1&gt;
-    &lt;h2&gt;My tickets component&lt;/h2&gt;
-    &lt;go-tickets&gt;&lt;/go-tickets&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre><p>Obviously <code>my.gomus.de</code> doesn&#39;t exist so this will not work. To get the domain name for the instance you should work with, please contact your project manager.</p>
-<blockquote>
-<p><em>NOTE: The config variable needs to load first before the component script loads.</em></p>
-<p><em>NOTE: Detailed documentation for this variable can be found under the <a href="https://giantmonkey.github.io/gomus-components-doc/classes/GomusOptions.html">GomusOptions</a> class.</em></p>
-</blockquote>
-<h3 id="next-steps-">Next steps...</h3>
-<p>Congratulations! You have now created your first components website.</p>
-<p>For more tips and troubleshooting continue to the <a href="./best-practices.html">best practices</a> section. Or dive straight into the <a href="./top-level-components.html">top level components</a> documentation.</p>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">lib/auth/src/auth.model.ts:10</a></div>
+                                        </td>
+                                    </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <b>passwordConfirmation</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>passwordConfirmation:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</bcode>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">lib/auth/src/auth.model.ts:11</a></div>
+                                        </td>
+                                    </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <b>userType</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>userType:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</bcode>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">lib/auth/src/auth.model.ts:13</a></div>
+                                        </td>
+                                    </tr>
+
+                        </tbody>
+                    </table>
+            </section>
+    </div>
+
+
+    <div class="tab-pane fade tab-source-code" id="source">
+        <pre class="line-numbers"><code class="language-typescript">export interface SignInData {
+  email:                  string;
+  password:               string;
+  userType?:              string;
+}
+
+export interface RegisterData {
+  email:                  string;
+  password:               string;
+  passwordConfirmation:   string;
+  name?:                  string;
+  userType?:              string;
+}
+
+export interface RegisterData {
+  [key: string]: string;
+}
+
+export interface UpdatePasswordData {
+  password:               string;
+  passwordConfirmation:   string;
+  passwordCurrent?:       string;
+  userType?:              string;
+  resetPasswordToken?:    string;
+}
+
+export interface ResetPasswordData {
+  email:                  string;
+  userType?:              string;
+}
+
+// State Data
+
+export interface AuthData {
+  accessToken:    string;
+  client:         string;
+  expiry:         string;
+  tokenType:      string;
+  uid:            string;
+}
+
+export interface UserData {
+  id:             number;
+  provider:       string;
+  uid:            string;
+  name:           string;
+  nickname:       string;
+  image:          any;
+  email:          string;
+}
+
+// Configuration Options
+
+export interface UserType {
+  name:           string;
+  path:           string;
+}
+
+export interface GlobalOptions {
+  headers?:       { [key:string]: string; }
+}
+
+export interface Angular2TokenOptions {
+  apiBase?:                   string;
+  apiPath?:                   string;
+  websiteHost?:               string;
+
+  signInPath?:                string;
+  signInRedirect?:            string;
+  signInStoredUrlStorageKey?: string;
+
+  signOutPath?:               string;
+  validateTokenPath?:         string;
+  signOutFailedValidate?:     boolean;
+
+  deleteAccountPath?:         string;
+  registerAccountPath?:       string;
+  registerAccountCallback?:   string;
+
+  updatePasswordPath?:        string;
+
+  resetPasswordPath?:         string;
+  resetPasswordCallback?:     string;
+
+  userTypes?:                 UserType[];
+
+  oAuthBase?:                 string;
+  oAuthPaths?:                { [key:string]: string; };
+  oAuthCallbackPath?:         string;
+  oAuthWindowType?:           string;
+  oAuthWindowOptions?:        { [key:string]: string; };
+
+  globalOptions?:             GlobalOptions;
+}
+</code></pre>
+    </div>
+</div>
+
+
+
 
                    </div><div class="search-results">
     <div class="has-results">

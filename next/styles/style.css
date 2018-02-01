@@ -66,3 +66,7 @@ h3 a:hover, .example h6 a {
   text-decoration: none;
 }
 
+.go-comment {
+  font-size: 80%;
+  opacity: 0.8;
+}
