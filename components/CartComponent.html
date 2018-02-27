@@ -546,6 +546,7 @@ starting of the checkout process.</p>
 &lt;ng-template let-item=&quot;item&quot;&gt;
    &lt;div [go-cart-item]=&quot;item&quot;&gt;
      &lt;go-select [item]=&quot;item&quot;&gt;&lt;/go-select&gt;
+     &lt;button [go-cart-item-delete]=&quot;item&quot;&gt;X&lt;/button&gt;
      &lt;div&gt;{{item?.cart.title}} &lt;br&gt; {{item?.cart.time}}&lt;/div&gt;
      &lt;div&gt;{{item?.cart.price}} €&lt;/div&gt;
      &lt;div&gt;{{item?.cart.total}} €&lt;/div&gt;
