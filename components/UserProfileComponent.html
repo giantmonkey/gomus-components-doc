@@ -656,11 +656,6 @@ See the third example below.</p>
          &lt;select go-form-control=&quot;addr_country_id&quot;&gt;&lt;/select&gt;
          &lt;div go-input-error=&quot;addr_country_id&quot;&gt;&lt;/div&gt;
        &lt;/div&gt;
-       &lt;div go-input-container&gt;
-         &lt;label&gt;Adresstyp&lt;/label&gt;
-         &lt;select go-form-control=&quot;adress_type_id&quot;&gt;&lt;/select&gt;
-         &lt;div go-input-error=&quot;adress_type_id&quot;&gt;&lt;/div&gt;
-       &lt;/div&gt;
        &lt;button type=&quot;submit&quot;&gt;Speichern&lt;/button&gt;
        &lt;button go-user-addresses-cancel type=&quot;button&quot;&gt;Abbrechen&lt;/button&gt;
        &lt;button go-user-addresses-delete type=&quot;button&quot;&gt;Löschen&lt;/button&gt;
@@ -671,7 +666,6 @@ See the third example below.</p>
            &lt;li&gt;{{item.street}}&lt;/li&gt;
            &lt;li&gt;{{item.zip}} {{item.city}}&lt;/li&gt;
            &lt;li&gt;{{item.country}}&lt;/li&gt;
-           &lt;li&gt;{{item.addr_type}}&lt;/li&gt;
          &lt;/ul&gt;
          &lt;button [go-user-addresses-select]=&quot;item&quot;&gt;Auswählen&lt;/button&gt;
          &lt;button [go-user-addresses-edit]=&quot;item&quot;&gt;Bearbeiten&lt;/button&gt;
