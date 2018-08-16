@@ -487,6 +487,9 @@ from success and pending states to failure states.</p>
 <li><a href="../components/CheckoutFailureComponent.html">CheckoutFailureComponent</a></li>
 </ul>
 <p>The available options are listed under the inputs section below.</p>
+<p>The CheckoutComponent uses a flag in localStorage to check if we are in the checkout process or not.
+This can be set using <code>localStorage.setItem(&#39;go-checkout&#39;, &#39;true&#39;);</code> and should be removed after the
+create request to go~mus.</p>
 <h3 id="-demos-demos-"><a href="#demos">Demos</a></h3>
 <p><example-url><a href="https://components.gomus.de/checkout/checkout.html#/?checkout=success">https://components.gomus.de/checkout/checkout.html#/?checkout=success</a></example-url></p>
 <p><example-url><a href="https://components.gomus.de/checkout/checkout-custom.html#/?checkout=success">https://components.gomus.de/checkout/checkout-custom.html#/?checkout=success</a></example-url></p>
