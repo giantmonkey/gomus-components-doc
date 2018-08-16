@@ -482,7 +482,48 @@
 the event, tour and ticket items that have been added. It also allows the
 starting of the checkout process.</p>
 <p>The CartComponent also can be customised by providing a valid JSON object to an <code>options</code> attribute.</p>
-<h3 id="-demos-demos-"><a href="#demos">Demos</a></h3>
+<p>The cart is stored locally in the browser with localStorage using the key <code>go-cart</code>. For advanced usage, this can be manually edited.
+The <code>go-cart</code> value consists of an array of <code>items</code> and the <code>total</code> cents.</p>
+<pre class="line-numbers"><code class="language-json">{
+   items: [],
+   total: 0
+}</code></pre><p>The item objects follow the same structure as the API takes, see the <a href="https://giantmonkey.github.io/gomus-api-doc/reseller_api.html#items">documentation</a>.
+There is however an extra property called <code>cart</code>. This contains information for the CartComponent to display to the user.</p>
+<pre class="line-numbers"><code class="language-json">// Item structure
+{
+   attributes: {},
+   cart: {},
+   type: &quot;&quot;
+}
+
+// Ticket item
+cart: {
+  price_cents: number,
+  total_cents: number,
+  title: string,
+  available: number[], // An array of numbers for the select box
+  time: string, // human readable time
+}
+
+// Event item
+cart: {
+  price_cents: number,
+  total_cents: number,
+  title: string,
+  quantity: number, // quantity for the select box
+  available: number[], // An array of numbers for the select box
+  time: string, // human readable time
+}
+
+// Ticket item
+cart: {
+  price_cents: number,
+  total_cents: number,
+  title: string,
+  quantity: number, // quantity for the select box
+  available: number[], // An array of numbers for the select box
+  time: string, // human readable time
+}</code></pre><h3 id="-demos-demos-"><a href="#demos">Demos</a></h3>
 <p><example-url><a href="https://components.gomus.de/cart/cart.html">https://components.gomus.de/cart/cart.html</a></example-url></p>
 <p><example-url><a href="https://components.gomus.de/cart/cart-custom.html">https://components.gomus.de/cart/cart-custom.html</a></example-url></p>
 
